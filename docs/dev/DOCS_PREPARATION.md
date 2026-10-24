@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested in the project prompt of 2026-10-24.
 - Delivery mode: strict multipass. Preserve established phase/task IDs, names, scope, parentage, order, dependencies and exits; add later scope in subsequent bounded ranges. No flexible exception is granted.
-- Current pass: 3 — Conditional ghost visibility. Cursor: DOCS-002 after reset publication and verified issue reopening.
+- Current pass: 3. Cursor: DOCS-002 accepted/preapproved; finish publication and hosted closure before advancing.
 - Approval basis: first PROJECT and recorded cross-scope proposals approved by the user’s “Approve” reply on 2026-10-24, accepting published proposal e5fa48fd34e3f38bd99d3872c861313362478add. Later PROJECT approvals are waived under the announced autoloop selection; subsequent document checkpoints through TASKS are preapproved. Initial approval authorizes the agreed six-pass sequence and resets. New material autoloop decisions are delegated after that approval, with recorded rationale and visible updates.
 - Tracking: enabled for preparation and implementation by existing root AGENTS.md. Milestone `sdd-docs-main` #1 and DOCS-001–009 issues #1–9 were created and read back with exact standard content and associations before the first repository modification.
 - Publication: push/read back every owned commit before further work. Actual default/integration target is `main`.
@@ -55,12 +55,15 @@ All entries below originate in initial exploration, pass 1. The user approved th
 
 | Task | Current evidence / decision basis |
 | --- | --- |
-| DOCS-001 | Four root files preserved byte for byte against initial commit 893cffb7da0ac90abadb469c7e117a085e8286f3; no copies needed. Task template copied with only DOCS-001 checked. Initialization commit e8cf495287969eaf7d3c5e0f400eef066fe0cc9a pushed/read back exactly; issue #1 closed as completed and read back through the supplied-token API client after connector integration returned access-related 403. |
-| DOCS-002 | Pass 1 PROJECT proposal SHA-256 `33acd8f5dc87a14c08d80ec3d2594cd4dff3df7ce61b3d72613216d1a6ffbf23`; substantive brief review passed for requested baseline coverage, principal-scope proportionality and exclusion of future scope. User approved this exact published PROJECT state and cross-scope proposals on 2026-10-24. This completion commit retains PROJECT bytes unchanged with its checked DOCS-002 and acceptance evidence. |
-| DOCS-003–008 | Not started; scoped mode preapproval becomes operative after initial PROJECT approval. |
-| DOCS-009 | Not selected; remains unchecked and open at final autoloop stop. |
-
-Material decision status: the product/interaction recommendations above are accepted by the user’s initial approval. Implementation packages, exact key mapping and detailed acceptance fixtures remain for downstream owners. Future scope is not part of the initial PROJECT.
+| DOCS-001 | Initialization e8cf495287969eaf7d3c5e0f400eef066fe0cc9a published/readback verified; four existing root files preserved; issue #1 closed/readback verified. |
+| DOCS-002 | Scope 3: local accepted/preapproved completion; `PROJECT.md` SHA-256 `740d44096d52faa8cbefb206fa07775f607050f5204c3cdb346b23138175cbee`; see qualified acceptance/QC evidence below. Publication/issue effects are established by their actual readbacks. |
+| DOCS-003 | Scope 3: not complete in this scope; retained document is a prior-scope input until revised and rechecked. |
+| DOCS-004 | Scope 3: not complete in this scope; retained document is a prior-scope input until revised and rechecked. |
+| DOCS-005 | Scope 3: not complete in this scope; retained document is a prior-scope input until revised and rechecked. |
+| DOCS-006 | Scope 3: not complete in this scope; retained document is a prior-scope input until revised and rechecked. |
+| DOCS-007 | Scope 3: not complete in this scope; retained document is a prior-scope input until revised and rechecked. |
+| DOCS-008 | Scope 3: not complete in this scope; retained document is a prior-scope input until revised and rechecked. |
+| DOCS-009 | Not selected; unchecked/open. Whole-package QC and integration remain outside the autoloop boundary. |
 
 ## Initialization and current reset
 
@@ -73,7 +76,7 @@ Material decision status: the product/interaction recommendations above are acce
 
 ## Pending transitions
 
-Publish/read back this reset, reopen/read back the same issues #2–9 and confirm milestone #1 open, then revise PROJECT for scope 3.
+Publish/read back the current completion commit and close/read back issue #2. Then continue in dependency order within the six-pass sequence. Final stop: pass 6 DOCS-008, before DOCS-009, package integration or implementation.
 
 ## Active-pass document evidence
 
@@ -104,6 +107,8 @@ Publish/read back this reset, reopen/read back the same issues #2–9 and confir
 
 - Pass 2, DOCS-008: `TASKS.md` SHA-256 `23bd860592d87719a47ab37e90e06195f95134c21093ad97cef2ac35e11cf1b3`; `TASKS-REVIEW-REPORT.md` SHA-256 `70bb6c3a8bd16d47a67afb67da07a1b9ec7025ef4c41d7678026baece78e6e44`. Scoped autodoc/autoloop preapproval from the user-approved initial sequence; current-scope conformance/content review passed. Protected earlier PLAN/TASKS text compared and preserved; current counts and concrete scope reviewed. Current review: TASKS-REVIEW-REPORT.md.  Publication and issue #8 closure require readback after the containing commit.
 
+- Pass 3, DOCS-002: `PROJECT.md` SHA-256 `740d44096d52faa8cbefb206fa07775f607050f5204c3cdb346b23138175cbee`. Scoped autodoc/autoloop preapproval from the user-approved initial sequence; current-scope conformance/content review passed.  Publication and issue #2 closure require readback after the containing commit.
+
 ## Scope 1 completion and protected range
 
 Scope: Playable classic baseline. Current owned phase: 1; task range T-001–T-010. PLAN SHA-256 `5cff4b2cbc26db87ba89e7d3cc180b2af261fbc4a6afeb1cc9a9636890bc9e9c`; TASKS SHA-256 `37de6ae4bdfb041916252d19c71fb6fb645b1f0243a13d31fc61b2ebaa3ff906`. Earlier ranges retained exactly; current document QC is scoped and package QC remains unselected. The containing DOCS-008 completion commit is the retained source checkpoint for the next reset.
@@ -123,3 +128,7 @@ Scope: Gameplay enhancements. Current owned phase: 2; task range T-011–T-020. 
 ## Reset to scope 3
 
 Retained prior checkpoint 2488208a4b5f0236795866a474aa4412f90f536e, all product documents and scopes 1–2 phase/task ranges. Reason: predefined cumulative addition — Conditional ghost visibility. DOCS-002–009 reset together, DOCS-001 retained complete. User initial approval authorizes this reset and later PROJECT preapproval. Publish/read back, then reopen/read back existing issues #2–9; no document work until complete.
+
+## Scope 3 decision summary
+
+No new material choice: carried the human-approved whole-projection min-y rule forward. A straddling projection is hidden; visibility is independent of landing/drop. Phase 3 is intentionally one narrow delivery milestone. Basis: user-approved initial scope sequence and autoloop delegation; initial human decisions remain accepted, these additional details are agent-owned. Applicability: this and later scopes; active unless changed by user steering or a discovered conflict.
