@@ -1,9 +1,9 @@
 # Project handoff
 
-Checkpoint: main preparation initialization, DOCS-001 completion submitted.
+Checkpoint: first PROJECT proposal; human acceptance pending.
 This snapshot is identified by its containing commit. Recover later records and Git before continuation.
 
-Outcome: four existing root guidance files preserved; standard preparation records initialized. Provenance scaffold integrated and verified on main. No product code or accepted project brief exists.
+Outcome: initialization commit e8cf495287969eaf7d3c5e0f400eef066fe0cc9a is pushed/readback verified and issue #1 is closed/readback verified. Four root files remain preserved. The [PROJECT proposal](PROJECT.md) covers only classic gameplay; later scope and proposed interactions remain in DOCS_PREPARATION. No product code or accepted brief exists.
 
 ## Workflow and sources
 
@@ -27,6 +27,6 @@ Outcome: four existing root guidance files preserved; standard preparation recor
 
 ## Pending work and next action
 
-- Confirm initialization push and issue #1 closure; these later effects cannot be certified by this snapshot.
-- Then prepare and publish pass-1 PROJECT and README, presenting the initial cross-scope proposals from DOCS_PREPARATION for human approval.
+- Confirm publication of this proposal, then obtain first PROJECT approval covering the presented baseline and cross-scope proposals. DOCS-002 remains unchecked and issue #2 open; do not write ARCHITECTURE before approval.
+- On acceptance, persist exact accepted content, decision evidence and checked DOCS-002 together; publish/read back and close/read back issue #2. Continue the agreed autoloop only within its retained mode and final DOCS-008 stop.
 - No implementation or release is complete. Credentials and ignored inputs are not recoverable from a clone; supply hosting access separately when needed.
