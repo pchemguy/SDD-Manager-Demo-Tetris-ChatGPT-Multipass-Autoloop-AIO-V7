@@ -28,6 +28,12 @@ Rotation uses canonical shape states and an ordered kick table. Geometry tests i
 
 Ghost visibility is a separate decision over the computed projection. Hiding a projection does not change its geometry or consume randomness. Both midline boundaries and rendering can therefore be verified without duplicating landing logic.
 
+## Penetration policy
+
+Game owns the bonus inventory and the active piece's penetration flag. The landing query selects an ordinary or penetrator collision policy. Both policies retain board bounds; penetration permits transit overlap but never an overlapping lock. Game validates future landing feasibility after candidate transformations. Settled cells carry an appearance tag so a locked white penetrator remains white without retaining active ability. No block is deleted to make a landing possible.
+
+The renderer distinguishes ghost/active/settled layers while respecting the white/non-white color rule. Bonus symbols and accessible count derive from the same inventory snapshot, preventing a separately updated UI counter.
+
 ## Verification and tradeoffs
 
 Canvas keeps board drawing simple; DOM controls provide semantic form interaction and readable status. Pure transitions trade a small amount of snapshot copying for clear ownership and deterministic testing; the board is only 200 cells. Tests use public commands and snapshots rather than reproducing implementation algorithms. Browser verification covers focus, keyboard routing, Canvas output and teardown in both required browsers. Provisioning follows the root browser policy; document readiness does not establish runtime capability.
