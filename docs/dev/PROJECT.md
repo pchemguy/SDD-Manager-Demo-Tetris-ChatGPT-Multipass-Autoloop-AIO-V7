@@ -2,28 +2,20 @@
 
 ## Purpose and users
 
-Provide a small, playable single-player Tetris game for people using a desktop browser and keyboard. A player can start immediately, understand the controls and score, lose a game and restart without reloading the page.
+Provide a single-player Tetris game for desktop-browser keyboard users. Players can start immediately, see their score and controls, lose a game and restart without reloading. The application is delivered as static assets, without a backend or account.
 
-## Scope and intended outcome
+## Product scope
 
-The game presents a rectangular board with falling tetrominoes. Players move and rotate the active piece while gravity advances it downward. Pieces settle into the board, completed horizontal rows clear, and line clears increase the score. A blocked spawn ends the game. Restart clears the game state and begins a fresh game.
+Play on a 10-column, 20-row board with seven tetromino types, horizontal movement, clockwise rotation, soft drop and fixed one-second gravity. Completed rows clear simultaneously and score 100/300/500/800 points for one/two/three/four lines. A blocked spawn ends the game. Restart clears the board, score and current run.
 
-The interface shows the board, score, game-over state, keyboard instructions and a restart control. It must remain legible and responsive during play. Browser scrolling must not consume gameplay keys while the game has focus; controls must remain usable through the keyboard.
+Provide a shuffled seven-piece bag, one-use-per-piece hold, a landing ghost, SRS clockwise wall kicks and hard drop. The default locking rule waits one full gravity interval after grounding, including after hard drop. Grounded manipulation cannot repeatedly extend that deadline.
 
-## Proposed product choices
+## Interaction and quality
 
-Use a 10-column, 20-row visible board and fixed one-second gravity. Choose tetrominoes independently with equal probability. Support horizontal movement, clockwise rotation and soft drop. Reject movement or rotation that crosses a board boundary or overlaps settled cells. Lock immediately after a downward movement attempt fails. Score single, double, triple and four-line clears as 100, 300, 500 and 800 points respectively, without a level multiplier or drop-distance points.
+Use TypeScript for game-state checks, Canvas for the board and ordinary DOM controls/status. Keep game rules independently testable from drawing, input and browser storage. Suspend gameplay on hidden pages or lost game focus and require deliberate resumption; suspension never advances game timers. Provide legible controls, visible keyboard focus and readable game-over/score status.
 
-Suspend simulation when the page is hidden or game focus is lost and require deliberate resumption, avoiding an unexpected loss while the player is away. Restart discards the current run and resets score, board and piece state.
-
-Deliver a static browser application without a server-side service. TypeScript with a Canvas board and ordinary DOM status/controls is the recommended implementation direction: it keeps drawing and controls simple while supporting checked game-state transitions. Exact build tooling, controls and behavioral acceptance fixtures will be defined in the design and specification.
+Verify deterministic game transitions and actual keyboard/rendering paths in isolated Chromium and managed Firefox environments under the repository browser policy. Headless interaction and screenshots are sufficient. The intended behavior is specified here; running software and browser compatibility require implementation evidence.
 
 ## Non-goals
 
-The product excludes multiplayer, accounts, leaderboards, saved game state, mobile touch controls, audio, level progression and adjustable settings. It includes no hold, landing ghost, next-piece preview, bag randomizer, wall kicks, hard drop or penetration ability.
-
-## Quality and verification
-
-Keep game rules independently testable from drawing and browser input. Verify board transitions, scoring, spawn failure and restart with deterministic scenarios. Exercise actual keyboard interaction and rendered board output in isolated Chromium and managed Firefox environments under the repository browser policy. Headless execution is sufficient for those checks. Browser installation and application execution remain unverified at this documentation stage.
-
-These product choices are proposals awaiting acceptance; the requested core gameplay is retained without unresolved contradictions. The intended first playable version is v0.1.0.
+Exclude multiplayer, accounts, backend leaderboards, saved games, touch controls, audio and level/speed progression. No service or network request is needed during play after static assets load. Build/dependency versions are selected and pinned during implementation; release tags are created only for verified integrated implementation phases.

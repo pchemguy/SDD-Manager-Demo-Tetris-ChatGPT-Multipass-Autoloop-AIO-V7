@@ -1,6 +1,6 @@
 # Browser Tetris
 
-A browser-based single-player Tetris project. The repository currently contains an accepted classic-game brief and development-preparation records; playable application code has not been implemented.
+A browser-based single-player Tetris project. The repository contains accepted/preapproved development documents for gameplay enhancements; playable application code has not been implemented.
 
 ## Project documents
 
