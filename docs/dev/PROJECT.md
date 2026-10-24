@@ -12,6 +12,8 @@ Provide a shuffled seven-piece bag, one-use-per-piece hold, a landing ghost, SRS
 
 Display the dynamic ghost only when its entire landing projection is in the lower half of the board. Hide projections that cross the midline or lie above it.
 
+A four-line clear earns one penetrator activation bonus, capped at three. Activation makes the current piece entirely white and allows it to traverse settled blocks without removing them until it locks at a valid non-overlapping landing. Hard drop and ghost use that same lowest valid landing. Hold is unavailable during penetration. Show one bonus symbol per available activation.
+
 ## Interaction and quality
 
 Use TypeScript for game-state checks, Canvas for the board and ordinary DOM controls/status. Keep game rules independently testable from drawing, input and browser storage. Suspend gameplay on hidden pages or lost game focus and require deliberate resumption; suspension never advances game timers. Provide legible controls, visible keyboard focus and readable game-over/score status.
