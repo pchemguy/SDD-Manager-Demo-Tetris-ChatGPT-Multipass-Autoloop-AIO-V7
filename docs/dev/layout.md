@@ -19,10 +19,13 @@ The root guidance/policy files, bundled agent packages and docs/dev preparation 
 | C09 Landing and rotation fixtures | src/core/landing.ts; geometry.ts remains canonical shape/kick owner | tests/unit/landing.test.ts; tests/fixtures/rotation; tests/e2e/enhancements.spec.ts |
 | Dynamic ghost visibility | src/browser/view.ts; a pure exported predicate may be colocated there | tests/unit/ghost-visibility.test.ts; tests/e2e/ghost.spec.ts |
 | Penetrator policy/inventory/appearance | landing.ts and game.ts own rules; board.ts retains settled appearance; view.ts owns rendering | tests/fixtures/penetration; tests/unit/penetration.test.ts; tests/e2e/penetrator.spec.ts |
+| C10 Configuration | src/config/settings.ts; src/config/codec.ts; browser runtime/view bind controls | tests/unit/settings.test.ts; tests/integration/configuration.test.ts; tests/e2e/configuration.spec.ts |
 
 ## Dependency and placement rules
 
 Core imports only core/plain types; it must not import browser modules, document/window, runner packages or fixture files. Browser adapters import core and compose through Runtime. Geometry owns canonical shapes/rotation data; board owns settled mutation; Game orchestrates transitions without copying geometry or rendering rules. Put shared public snapshot/command types with core, not in a browser utility bucket. Colocate narrowly scoped pure helpers with their owner unless an independently meaningful module is justified.
+
+Configuration exports validated plain data to Runtime/Game. Core may consume the setting types through a pure shared contract but must not depend on browser configuration controls or storage adapters. Codec/default definitions stay in one owner; forms and persistence reuse them rather than copying enum tables.
 
 ## Documentation and generated files
 

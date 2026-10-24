@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested in the project prompt of 2026-10-24.
 - Delivery mode: strict multipass. Preserve established phase/task IDs, names, scope, parentage, order, dependencies and exits; add later scope in subsequent bounded ranges. No flexible exception is granted.
-- Current pass: 5. Cursor: DOCS-006 accepted/preapproved; finish publication and hosted closure before advancing.
+- Current pass: 5. Cursor: DOCS-007 accepted/preapproved; finish publication and hosted closure before advancing.
 - Approval basis: first PROJECT and recorded cross-scope proposals approved by the user’s “Approve” reply on 2026-10-24, accepting published proposal e5fa48fd34e3f38bd99d3872c861313362478add. Later PROJECT approvals are waived under the announced autoloop selection; subsequent document checkpoints through TASKS are preapproved. Initial approval authorizes the agreed six-pass sequence and resets. New material autoloop decisions are delegated after that approval, with recorded rationale and visible updates.
 - Tracking: enabled for preparation and implementation by existing root AGENTS.md. Milestone `sdd-docs-main` #1 and DOCS-001–009 issues #1–9 were created and read back with exact standard content and associations before the first repository modification.
 - Publication: push/read back every owned commit before further work. Actual default/integration target is `main`.
@@ -61,7 +61,7 @@ All entries below originate in initial exploration, pass 1. The user approved th
 | DOCS-004 | Scope 5: local accepted/preapproved completion; `DECOMPOSITION.md` SHA-256 `61fefac4d4ad9cd44747be3f82ec0eb115bbb0ec9b395a69b2f1b782ffb157cf`; see qualified acceptance/QC evidence below. Publication/issue effects are established by their actual readbacks. |
 | DOCS-005 | Scope 5: local accepted/preapproved completion; `SPEC.md` SHA-256 `356b235584786a84d12f4031f50a0853796961dbb934917242c72cba0ea900fd`; see qualified acceptance/QC evidence below. Publication/issue effects are established by their actual readbacks. |
 | DOCS-006 | Scope 5: local accepted/preapproved completion; `PLAN.md` SHA-256 `c793527a5742c3e9194ad21f37673598504a5163924a08289250b7f662a7d5c0`; see qualified acceptance/QC evidence below. Publication/issue effects are established by their actual readbacks. |
-| DOCS-007 | Scope 5: not complete in this scope; retained document is a prior-scope input until revised and rechecked. |
+| DOCS-007 | Scope 5: local accepted/preapproved completion; `layout.md` SHA-256 `f4617340df416e863d4d1c3fced101431943587d879a25162031e926e090e6eb`; see qualified acceptance/QC evidence below. Publication/issue effects are established by their actual readbacks. |
 | DOCS-008 | Scope 5: not complete in this scope; retained document is a prior-scope input until revised and rechecked. |
 | DOCS-009 | Not selected; unchecked/open. Whole-package QC and integration remain outside the autoloop boundary. |
 
@@ -76,7 +76,7 @@ All entries below originate in initial exploration, pass 1. The user approved th
 
 ## Pending transitions
 
-Publish/read back the current completion commit and close/read back issue #6. Then continue in dependency order within the six-pass sequence. Final stop: pass 6 DOCS-008, before DOCS-009, package integration or implementation.
+Publish/read back the current completion commit and close/read back issue #7. Then continue in dependency order within the six-pass sequence. Final stop: pass 6 DOCS-008, before DOCS-009, package integration or implementation.
 
 ## Active-pass document evidence
 
@@ -144,6 +144,8 @@ Publish/read back the current completion commit and close/read back issue #6. Th
 - Pass 5, DOCS-005: `SPEC.md` SHA-256 `356b235584786a84d12f4031f50a0853796961dbb934917242c72cba0ea900fd`; `spec/ROTATION.md` SHA-256 `d0deb5c15e14bf490a1ee492364eb1b860b131b9fce470315bf9103c4b7aaff5`; `spec/CONFIGURATION.md` SHA-256 `d25a61625e7e04f70114c7b6fdde4e23cb1a30ff917b9d57c1d3b9913ee48f6b`; `SPEC-REVIEW-REPORT.md` SHA-256 `6e1c595b7383b29004451239a0a018da1f571ec4bf4151c5bcc98ff3d68757dc`. Scoped autodoc/autoloop preapproval from the user-approved initial sequence; current-scope conformance/content review passed. Current review: SPEC-REVIEW-REPORT.md.  Publication and issue #5 closure require readback after the containing commit.
 
 - Pass 5, DOCS-006: `PLAN.md` SHA-256 `c793527a5742c3e9194ad21f37673598504a5163924a08289250b7f662a7d5c0`; `PLAN-REVIEW-REPORT.md` SHA-256 `0143ec15bf8a34e4c89475f354cf913e0615e42651d915c9a6bf604aa7bcf017`. Scoped autodoc/autoloop preapproval from the user-approved initial sequence; current-scope conformance/content review passed. Protected earlier PLAN/TASKS text compared and preserved; current counts and concrete scope reviewed. Current review: PLAN-REVIEW-REPORT.md.  Publication and issue #6 closure require readback after the containing commit.
+
+- Pass 5, DOCS-007: `layout.md` SHA-256 `f4617340df416e863d4d1c3fced101431943587d879a25162031e926e090e6eb`; `PLAN-REVIEW-REPORT.md` SHA-256 `afd4d2b28cad28f42afd25726f43005f560c105e6457738152ce4325349cec65`. Scoped autodoc/autoloop preapproval from the user-approved initial sequence; current-scope conformance/content review passed. Current review: PLAN-REVIEW-REPORT.md.  Publication and issue #7 closure require readback after the containing commit.
 
 ## Scope 1 completion and protected range
 
