@@ -107,3 +107,37 @@ Exactly one phase code-review/testing/report outcome after every delivery milest
 Phase exits: Demonstrate visibility at min projected row 9 versus 10 and for straddling/rotated pieces in both browsers; hard drop still lands identically when the ghost is hidden. Update guidance and v0.3.0 package.
 
 Integration/release boundary: complete all phase tasks/reports and applicable hosted closures, explicitly integrate into the recorded target, verify the merged build and relevant regressions, publish/read back the default-branch release commit/tag, then publish release notes for v0.3.0. A partial phase stops on its working branch. No later capability is required for this phase’s scoped exit.
+
+## Phase 4 — Penetrator mode
+
+Outcome and included scope: Bonus-funded white penetrators, deepest non-overlapping landing through settled barriers, shared ghost/drop, disabled hold during penetration and exact inventory indicators. No settings or preview yet.
+
+Dependency: Phase 3 verified, integrated and published.
+
+Contracts: P01–P02, E01–E02, V01, Q01. Target release: v0.4.0.
+
+### Milestone 4.1 — Safe penetration movement
+
+Demonstrate a current piece traversing a barrier to a deeper valid landing without any overwritten settled cell.
+
+Exit: demonstrate this integrated capability, review its code and relevant dependencies, run focused acceptance/regressions, repair blockers and retain a milestone report/HANDOFF. TASKS assigns these obligations to the appropriate final boundary task under the review-unit policy. Feedback may support a human decision to continue, amend, simplify or stop; it does not automatically change authorized scope.
+
+### Milestone 4.2 — Bonus activation and readable feedback
+
+Demonstrate earning and spending inventory with clear white active pieces and immediate side-panel feedback.
+
+Exit: demonstrate this integrated capability, review its code and relevant dependencies, run focused acceptance/regressions, repair blockers and retain a milestone report/HANDOFF. TASKS assigns these obligations to the appropriate final boundary task under the review-unit policy. Feedback may support a human decision to continue, amend, simplify or stop; it does not automatically change authorized scope.
+
+### Milestone 4.3 — Composed penetrator delivery
+
+Demonstrate repeated ordinary/penetrator play through bonus earning, deep drop, line clearing and restart.
+
+Exit: demonstrate this integrated capability, review its code and relevant dependencies, run focused acceptance/regressions, repair blockers and retain a milestone report/HANDOFF. TASKS assigns these obligations to the appropriate final boundary task under the review-unit policy. Feedback may support a human decision to continue, amend, simplify or stop; it does not automatically change authorized scope.
+
+### Milestone 4.4 — Phase review
+
+Exactly one phase code-review/testing/report outcome after every delivery milestone is verified and closed. Verify cross-milestone behavior, the phase exits below and carried findings; repair blockers, retain the phase report and aggregate deferred TODOs. When this is the final phase of the complete intended task list, also retain the final implementation report/TODO aggregation. This special review milestone is not a delivery-count target.
+
+Phase exits: Earn/spend/cap bonuses, activate with B, traverse occupied rows without destroying cells, reject infeasible transforms and lock legally under the same timing lifecycle. Verify white rendering, dynamic ghost/deep drop agreement and ordinary regressions in both browsers. Prepare v0.4.0 delivery.
+
+Integration/release boundary: complete all phase tasks/reports and applicable hosted closures, explicitly integrate into the recorded target, verify the merged build and relevant regressions, publish/read back the default-branch release commit/tag, then publish release notes for v0.4.0. A partial phase stops on its working branch. No later capability is required for this phase’s scoped exit.
