@@ -121,3 +121,53 @@ Each phase’s final milestone has exactly one phase review task. Delivery miles
         - [ ] T-023 — Review, test and report phase 3
             Scope: whole phase implementation, integration boundaries, scoped PLAN exits, reports and carried findings. Depends on: T-022 and verified completion/closure of delivery milestones 3.1.
             Evidence: separate code review and required type/unit/integration/browser/build evidence; repair blockers, retain `docs/dev/reports/phases/3/PHASE-REPORT.md` and HANDOFF with initial completion. Aggregate unresolved milestone TODOs with evidence/rationale/options/owners. If this is the final phase of the complete intended list, include `docs/dev/reports/IMPLEMENTATION-REPORT.md` and final TODO aggregation. Do not claim release publication before verified integration/tag/release operations.
+
+## Phase 4 — Penetrator mode
+
+- [ ] Phase 4 — Penetrator mode
+    - [ ] Milestone 4.1 — Safe penetration movement
+        - [ ] T-024 — Define the deepest-valid penetrator landing query
+            Scope: src/core/landing.ts and board/landing fixtures. Contracts: P01–P02, E01–E02, V01, Q01, narrowed to this phase’s PLAN scope.
+            Depends on: T-023. Predecessor phase must also be integrated/published and its milestone closures verified.
+            Evidence: Enumerate in-bounds non-overlapping lower anchors irrespective of intervening occupancy; ordinary projection still stops at the first barrier. Check absent and zero-distance landings.
+        - [ ] T-025 — Integrate penetrator traversal and transform feasibility
+            Scope: src/core/game.ts, geometry/landing boundaries and unit tests. Contracts: P01–P02, E01–E02, V01, Q01, narrowed to this phase’s PLAN scope.
+            Depends on: T-024.
+            Evidence: Gravity/soft descent allow transient overlap only within bounds and toward a feasible target; lateral/rotation candidates require a valid landing at/below current y; reject stranded changes.
+        - [ ] T-026 — Integrate legal penetration lock, hard drop and ghost
+            Scope: src/core/game.ts, landing.ts, src/browser/view.ts and integration tests. Contracts: P01–P02, E01–E02, V01, Q01, narrowed to this phase’s PLAN scope.
+            Depends on: T-024, T-025.
+            Evidence: Use the same target for gravity/drop/ghost, start lock timing only at a legal landing and never merge overlapping cells. Verify all movement/timer transitions and whole safety milestone.
+            Milestone boundary: after this implementation and all prior milestone tasks, review the whole capability’s code/dependencies, execute required acceptance/regressions, repair blockers and commit report `docs/dev/reports/phases/4/4.1.md` plus HANDOFF with this task’s result and initial checkbox. Include findings and TODOs (None when empty); close/read back all task issues before closing the milestone.
+    - [ ] Milestone 4.2 — Bonus activation and readable feedback
+        - [ ] T-027 — Award and cap penetrator bonuses
+            Scope: src/core/game.ts and atomic-clear fixtures. Contracts: P01–P02, E01–E02, V01, Q01, narrowed to this phase’s PLAN scope.
+            Depends on: T-026.
+            Evidence: Every four-line clear awards one up to three, other counts none, both piece modes qualify, restart clears inventory and blocked next spawn retains earned results.
+        - [ ] T-028 — Gate activation, spending and hold lifecycle
+            Scope: src/core/game.ts, src/browser/input.ts and lifecycle fixtures. Contracts: P01–P02, E01–E02, V01, Q01, narrowed to this phase’s PLAN scope.
+            Depends on: T-027.
+            Evidence: B spends once only after feasibility, repeated/empty/infeasible activation rejects, hold is disabled while active and ability ends on lock/game over. Activation does not extend an existing grounded deadline.
+        - [ ] T-029 — Render white penetrators and exact bonus indicators
+            Scope: src/browser/view.ts, styles and visual/e2e fixtures. Contracts: P01–P02, E01–E02, V01, Q01, narrowed to this phase’s PLAN scope.
+            Depends on: T-027, T-028.
+            Evidence: Active/settled penetrators are white; regular palette is non-white. Distinct white ghost obeys midline; symbols and numeric count match 0–3 after earning/spending. Verify whole activation/feedback milestone.
+            Milestone boundary: after this implementation and all prior milestone tasks, review the whole capability’s code/dependencies, execute required acceptance/regressions, repair blockers and commit report `docs/dev/reports/phases/4/4.2.md` plus HANDOFF with this task’s result and initial checkbox. Include findings and TODOs (None when empty); close/read back all task issues before closing the milestone.
+    - [ ] Milestone 4.3 — Composed penetrator delivery
+        - [ ] T-030 — Complete penetrator boundary and interaction fixtures
+            Scope: tests/unit, tests/integration and tests/fixtures/penetration. Contracts: P01–P02, E01–E02, V01, Q01, narrowed to this phase’s PLAN scope.
+            Depends on: T-029.
+            Evidence: Cover multiple cavities, rotation feasibility, overlapping transit, cap/spend/award, both spawn-failure and hold gates, suspension and timer preservation without a production fixture backdoor.
+        - [ ] T-031 — Verify penetrator browser interaction and rendering
+            Scope: tests/e2e and owned rendering evidence. Contracts: P01–P02, E01–E02, V01, Q01, narrowed to this phase’s PLAN scope.
+            Depends on: T-030.
+            Evidence: Exercise real B/Space/C input, inventory/white cells, dynamic ghost and preserved settled barriers in both required browsers; regress ordinary game behavior.
+        - [ ] T-032 — Prepare penetrator guidance and package
+            Scope: docs/user, README.md, version metadata and RELEASE-NOTES.md. Contracts: P01–P02, E01–E02, V01, Q01, narrowed to this phase’s PLAN scope.
+            Depends on: T-030, T-031.
+            Evidence: Document activation/bonuses/hold restriction/landing behavior; build static assets, prepare v0.4.0 notes and verify whole composed milestone.
+            Milestone boundary: after this implementation and all prior milestone tasks, review the whole capability’s code/dependencies, execute required acceptance/regressions, repair blockers and commit report `docs/dev/reports/phases/4/4.3.md` plus HANDOFF with this task’s result and initial checkbox. Include findings and TODOs (None when empty); close/read back all task issues before closing the milestone.
+    - [ ] Milestone 4.4 — Phase review
+        - [ ] T-033 — Review, test and report phase 4
+            Scope: whole phase implementation, integration boundaries, scoped PLAN exits, reports and carried findings. Depends on: T-026, T-029, T-032 and verified completion/closure of delivery milestones 4.1, 4.2, 4.3.
+            Evidence: separate code review and required type/unit/integration/browser/build evidence; repair blockers, retain `docs/dev/reports/phases/4/PHASE-REPORT.md` and HANDOFF with initial completion. Aggregate unresolved milestone TODOs with evidence/rationale/options/owners. If this is the final phase of the complete intended list, include `docs/dev/reports/IMPLEMENTATION-REPORT.md` and final TODO aggregation. Do not claim release publication before verified integration/tag/release operations.
