@@ -16,7 +16,7 @@ A four-line clear earns one penetrator activation bonus, capped at three. Activa
 
 The side panel provides ghost visibility (hide/dynamic/show), hard-drop availability, next-piece preview, general and hard-drop locking policies, and hold availability. Defaults preserve dynamic ghost visibility, enabled hold/hard drop/preview, full-interval general locking and hard drop following that policy. Availability/display changes apply immediately; locking selections apply to the next active piece. Settings survive a game restart.
 
-Keep configuration in memory for the current page only. Reload restores defaults; cookies, URL parameters and browser storage do not restore or save settings.
+Restore each setting independently from a valid explicit URL parameter, a valid cookie, then its default. Save every valid explicit URL value to its cookie, including defaults; omitted URL parameters leave saved cookie values intact. A control change saves its setting cookie and replaces its query parameter without discarding unrelated URL content. Invalid values fall through independently. The game remains usable if either persistence channel is unavailable.
 
 ## Interaction and quality
 
