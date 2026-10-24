@@ -66,7 +66,9 @@ For an ordinary piece, landing is the greatest downward displacement reachable b
 
 Space hard-drops to exactly this projection in one action and adds no score. By default it follows full-interval locking: landing starts a fresh deadline if previously airborne; a pre-existing grounded deadline is retained. Ignore repeated-key events. Normal hard drop cannot cross blocking cells or move a piece upward. No next-piece preview is shown unless its configuration capability is available.
 
-Ghost visibility is always enabled while there is a running or suspended active piece; game over has no active/ghost layer. Suspension retains the visible snapshot.
+## V01 — Dynamic ghost visibility
+
+The dynamic ghost is visible exactly when a projection exists and every projected cell has y ≥ 10. Thus min(y)=9 hides it, min(y)=10 shows it, and any projection straddling rows 9/10 is hidden. Evaluate projected cells, not the active piece, anchor, center or average. Hiding never changes the landing or hard-drop result. Game over has no active/ghost layer; suspension retains the current projection/visibility.
 
 ## Q01 — Required verification
 
@@ -78,3 +80,4 @@ Use deterministic random streams and explicit time in core checks. Exercise each
 | --- | --- |
 | B01–B06 | Start, translate, rotate, descend, lock, clear/score, block spawn and restart; assert exact board/score, focus/suspension and one-loop lifetime |
 | E01–E02 / B04 | Two complete bags; empty/populated/repeated hold and blocked replacement; SRS success/rejection; ghost/drop identity; timer at 999/1000 ms and no grounded reset |
+| V01 | Project above, at and across midline; move active piece above a lower-half projection; hidden ghost does not change hard drop |
