@@ -34,6 +34,12 @@ Game owns the bonus inventory and the active piece's penetration flag. The landi
 
 The renderer distinguishes ghost/active/settled layers while respecting the white/non-white color rule. Bonus symbols and accessible count derive from the same inventory snapshot, preventing a separately updated UI counter.
 
+## Configuration boundary
+
+Configuration owns validated selected settings independently of a run. Runtime applies immediate display/action availability values and supplies a snapshot of locking policies when Game creates each active piece. Game retains the effective per-piece timing snapshot; presentation may show selected and effective policy without leaking internal implementation. Restart resets gameplay while retaining selected settings. Control changes are validated before dispatch, and no input handler edits configuration or gameplay fields directly.
+
+The configuration adapter is in-memory. Reload creates a new default configuration; the application has no storage or URL synchronization side effects.
+
 ## Verification and tradeoffs
 
 Canvas keeps board drawing simple; DOM controls provide semantic form interaction and readable status. Pure transitions trade a small amount of snapshot copying for clear ownership and deterministic testing; the board is only 200 cells. Tests use public commands and snapshots rather than reproducing implementation algorithms. Browser verification covers focus, keyboard routing, Canvas output and teardown in both required browsers. Provisioning follows the root browser policy; document readiness does not establish runtime capability.
