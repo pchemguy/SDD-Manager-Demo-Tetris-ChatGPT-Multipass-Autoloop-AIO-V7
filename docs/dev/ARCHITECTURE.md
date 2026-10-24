@@ -20,8 +20,14 @@ The core owns the settled grid, active piece, source state, score and lifecycle 
 
 Presentation receives copied/read-only snapshots. Drawn pixels are never collision input. Random draws and explicit elapsed time are injected; renderer calls cannot advance a source or mutate a timer. Rejected commands leave the run unchanged except for elapsed time processed before their timestamp. Internal invariant failures are programming errors surfaced by tests; they are not repaired by silently deleting settled cells.
 
+## Piece lifecycle and projections
+
+The piece source owns a shuffled bag and provides draw/peek semantics without exposing its queue for mutation. Game owns hold eligibility, active-piece replacement and the lock deadline. A shared landing query produces a projection from board and candidate piece; ghost and hard drop consume the same result. Timing is integrated inside Game using explicit event times, while Runtime owns wall-clock observation. This keeps a grounded deadline consistent across frames, input and suspension.
+
+Rotation uses canonical shape states and an ordered kick table. Geometry tests isolate pivots/offsets; Game tests integrate collision, hold, landing and timing. Hold swaps a type through Game rather than exchanging a mutable active-piece object.
+
 ## Verification and tradeoffs
 
 Canvas keeps board drawing simple; DOM controls provide semantic form interaction and readable status. Pure transitions trade a small amount of snapshot copying for clear ownership and deterministic testing; the board is only 200 cells. Tests use public commands and snapshots rather than reproducing implementation algorithms. Browser verification covers focus, keyboard routing, Canvas output and teardown in both required browsers. Provisioning follows the root browser policy; document readiness does not establish runtime capability.
 
-The component model in DECOMPOSITION defines the logical seams. SPEC owns exact behavior, PLAN delivery boundaries and layout physical allocation.
+The [component model](DECOMPOSITION.md) defines the logical seams. SPEC owns exact behavior, PLAN delivery boundaries and layout physical allocation.
