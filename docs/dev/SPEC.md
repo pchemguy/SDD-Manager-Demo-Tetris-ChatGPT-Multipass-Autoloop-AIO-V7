@@ -38,7 +38,9 @@ Runtime advances elapsed active time before dispatching an input command at that
 
 ## B04 — Rotation and locking
 
-Clockwise rotation uses the unshifted candidate only. Reject it on collision or bounds failure; do not kick. A failed downward attempt, whether gravity or soft drop, immediately locks the ordinary piece. Becoming grounded after a successful step does not itself lock it; the next failed descent does. Horizontal/rotation failure does not lock. Pieces cannot pass through settled cells.
+Apply the clockwise ordered SRS candidate offsets in [ROTATION](spec/ROTATION.md), accepting the first candidate satisfying the applicable movement rules. If all candidates fail, preserve the piece. Horizontal motion has no kick. There is no counterclockwise or 180-degree command.
+
+Under full-interval locking, grounding begins when the active piece reaches its landing and cannot descend further under its movement policy. Start a 1000 ms active-time deadline immediately on that transition, even between gravity ticks. At expiry lock if still grounded. Failed downward attempts, grounded translation/rotation and repeated hard drops do not restart the deadline. A successful transformation that leaves support cancels it; a later touchdown starts a fresh full interval. Rejected transforms have no timing effect. A spawn/hold replacement that starts grounded starts its own full deadline. No artificial reset cap is needed because remaining grounded never resets it.
 
 ## B05 — Atomic lock, line clear and scoring
 
@@ -48,9 +50,23 @@ Lock requires an in-bounds non-overlapping active piece. Merge all four cells, r
 
 Show board, score, lifecycle, controls, Restart and Resume when applicable. Canvas resizing/device pixel ratio changes must not change logical geometry or gameplay. Do not infer collision from pixels. Status and controls have readable DOM text/labels and visible keyboard focus. There is one runtime loop/listener set per mounted game; teardown cancels it and stale callbacks cannot affect a replacement instance. Repeated restart never adds another loop. Static play needs no account, network service, audio or local game-state storage.
 
-## B07 — Piece source
+## B07 — Piece-source boundary
 
-C03 maps independent uniform random draws to I, J, L, O, S, T, Z in that order using floor(7u), u in [0,1). Tests inject deterministic random values, including values at interval boundaries. Repeated types and droughts are permitted; no bag, hold, ghost, preview, hard drop or penetrator is available.
+C03 returns one valid type per draw through its injected random source. Restart creates a fresh source and rendering never consumes it. The current distribution/queue and hold conservation rules are defined in E01.
+
+## E01 — Seven-bag source and hold
+
+C03 shuffles exactly one of each I/J/L/O/S/T/Z per bag using Fisher–Yates and injected uniform [0,1) draws; exhaust a bag before drawing from the next. Any aligned seven draws contain all seven once; the boundary may repeat a type. Restart creates a fresh source. Peeking is read-only and must not alter later draw order.
+
+C activates hold at most once between locks. Empty hold stores the active type and draws one replacement; occupied hold swaps types without drawing. Replacement uses spawn anchor/orientation, a fresh gravity interval and its own grounded timer. Set hold eligibility false before replacement; a failed replacement spawn ends the run, retaining the hold operation. Only a lock followed by the next piece restores eligibility. Rejected/disabled/repeated hold has no effect. Held state contains a type, not position/orientation/timing. Restart clears the slot.
+
+## E02 — Landing, ghost and hard drop
+
+For an ordinary piece, landing is the greatest downward displacement reachable by consecutive legal one-cell descents without crossing occupied cells. An already grounded piece projects onto its own cells. The query is pure. The visible ghost draws the same type/rotation at landing with a distinct outline/transparency, beneath the active layer; it never becomes settled or changes collision. Recompute after every accepted transform and board change.
+
+Space hard-drops to exactly this projection in one action and adds no score. By default it follows full-interval locking: landing starts a fresh deadline if previously airborne; a pre-existing grounded deadline is retained. Ignore repeated-key events. Normal hard drop cannot cross blocking cells or move a piece upward. No next-piece preview is shown unless its configuration capability is available.
+
+Ghost visibility is always enabled while there is a running or suspended active piece; game over has no active/ghost layer. Suspension retains the visible snapshot.
 
 ## Q01 — Required verification
 
@@ -61,4 +77,4 @@ Use deterministic random streams and explicit time in core checks. Exercise each
 | Contract group | Observable acceptance |
 | --- | --- |
 | B01–B06 | Start, translate, rotate, descend, lock, clear/score, block spawn and restart; assert exact board/score, focus/suspension and one-loop lifetime |
-| B07 | Inject draws at type-interval boundaries and demonstrate repeated types without a bag |
+| E01–E02 / B04 | Two complete bags; empty/populated/repeated hold and blocked replacement; SRS success/rejection; ghost/drop identity; timer at 999/1000 ms and no grounded reset |
