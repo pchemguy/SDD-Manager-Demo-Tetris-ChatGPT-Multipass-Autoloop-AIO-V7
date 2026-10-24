@@ -1,6 +1,6 @@
 # Project handoff
 
-Checkpoint: documentation scope 1 — Playable classic baseline, DOCS-008 completion.
+Checkpoint: reset to documentation scope 2 — Gameplay enhancements.
 The containing commit identifies this snapshot. Read later DOCS_PREPARATION/task/Git evidence before continuation; this file does not certify its subsequent push or hosted effects.
 
 ## Workflow and sources
@@ -23,6 +23,6 @@ The containing commit identifies this snapshot. Read later DOCS_PREPARATION/task
 
 ## Pending work and next action
 
-- Publish/read back this completion commit and close/read back issue #8; these are pending until actual observations confirm them.
-- Then perform the authorized reset to scope 2: retain all product documents and protected ranges, uncheck DOCS-002–009 in one reset commit, push/read back, reopen/read back the same eight issues and confirm milestone open before PROJECT revision.
+- Publish/read back this reset and reopen/read back issues #2–9; confirm all eight open and milestone #1 open before PROJECT edits.
+- Resume DOCS-002 after all required reopenings are verified; retained product documents are inputs, not newly approved output.
 - A fresh clone cannot recover ignored credentials; supply hosting access separately. Application tests and releases are not performed by this preparation.
