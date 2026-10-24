@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested in the project prompt of 2026-10-24.
 - Delivery mode: strict multipass. Preserve established phase/task IDs, names, scope, parentage, order, dependencies and exits; add later scope in subsequent bounded ranges. No flexible exception is granted.
-- Current pass: 3. Cursor: DOCS-007 accepted/preapproved; finish publication and hosted closure before advancing.
+- Current pass: 3. Cursor: DOCS-008 accepted/preapproved; finish publication and hosted closure before advancing.
 - Approval basis: first PROJECT and recorded cross-scope proposals approved by the user’s “Approve” reply on 2026-10-24, accepting published proposal e5fa48fd34e3f38bd99d3872c861313362478add. Later PROJECT approvals are waived under the announced autoloop selection; subsequent document checkpoints through TASKS are preapproved. Initial approval authorizes the agreed six-pass sequence and resets. New material autoloop decisions are delegated after that approval, with recorded rationale and visible updates.
 - Tracking: enabled for preparation and implementation by existing root AGENTS.md. Milestone `sdd-docs-main` #1 and DOCS-001–009 issues #1–9 were created and read back with exact standard content and associations before the first repository modification.
 - Publication: push/read back every owned commit before further work. Actual default/integration target is `main`.
@@ -62,7 +62,7 @@ All entries below originate in initial exploration, pass 1. The user approved th
 | DOCS-005 | Scope 3: local accepted/preapproved completion; `SPEC.md` SHA-256 `7f30ab4dff677d212d77f141ae47e26b6bdebc747817807cfc3926b4ffb443b3`; see qualified acceptance/QC evidence below. Publication/issue effects are established by their actual readbacks. |
 | DOCS-006 | Scope 3: local accepted/preapproved completion; `PLAN.md` SHA-256 `44be4b64bb7b7133faf52ebb0641eb51398ba01f8124cc8627836111010e9298`; see qualified acceptance/QC evidence below. Publication/issue effects are established by their actual readbacks. |
 | DOCS-007 | Scope 3: local accepted/preapproved completion; `layout.md` SHA-256 `63387301c084dd33f23183de1c031c7bbe481954358b0236301a5a2d86748aef`; see qualified acceptance/QC evidence below. Publication/issue effects are established by their actual readbacks. |
-| DOCS-008 | Scope 3: not complete in this scope; retained document is a prior-scope input until revised and rechecked. |
+| DOCS-008 | Scope 3: local accepted/preapproved completion; `TASKS.md` SHA-256 `f8953d44f735c393ef5e8e491af341b8e77fa83689121e90d5a7d65b8a791d7d`; see qualified acceptance/QC evidence below. Publication/issue effects are established by their actual readbacks. |
 | DOCS-009 | Not selected; unchecked/open. Whole-package QC and integration remain outside the autoloop boundary. |
 
 ## Initialization and current reset
@@ -76,7 +76,7 @@ All entries below originate in initial exploration, pass 1. The user approved th
 
 ## Pending transitions
 
-Publish/read back the current completion commit and close/read back issue #7. Then continue in dependency order within the six-pass sequence. Final stop: pass 6 DOCS-008, before DOCS-009, package integration or implementation.
+Publish/read back the current completion commit and close/read back issue #8. Then continue in dependency order within the six-pass sequence. Final stop: pass 6 DOCS-008, before DOCS-009, package integration or implementation.
 
 ## Active-pass document evidence
 
@@ -119,6 +119,8 @@ Publish/read back the current completion commit and close/read back issue #7. Th
 
 - Pass 3, DOCS-007: `layout.md` SHA-256 `63387301c084dd33f23183de1c031c7bbe481954358b0236301a5a2d86748aef`; `PLAN-REVIEW-REPORT.md` SHA-256 `9c23bc9d37272ae53a1280a1715fc13452fd98bcda14885e43b4d515f084696c`. Scoped autodoc/autoloop preapproval from the user-approved initial sequence; current-scope conformance/content review passed. Current review: PLAN-REVIEW-REPORT.md.  Publication and issue #7 closure require readback after the containing commit.
 
+- Pass 3, DOCS-008: `TASKS.md` SHA-256 `f8953d44f735c393ef5e8e491af341b8e77fa83689121e90d5a7d65b8a791d7d`; `TASKS-REVIEW-REPORT.md` SHA-256 `15d29370f714001a097e13372f552f849f2a7a0fa1c4b63bf11802debedaad28`. Scoped autodoc/autoloop preapproval from the user-approved initial sequence; current-scope conformance/content review passed. Protected earlier PLAN/TASKS text compared and preserved; current counts and concrete scope reviewed. Current review: TASKS-REVIEW-REPORT.md.  Publication and issue #8 closure require readback after the containing commit.
+
 ## Scope 1 completion and protected range
 
 Scope: Playable classic baseline. Current owned phase: 1; task range T-001–T-010. PLAN SHA-256 `5cff4b2cbc26db87ba89e7d3cc180b2af261fbc4a6afeb1cc9a9636890bc9e9c`; TASKS SHA-256 `37de6ae4bdfb041916252d19c71fb6fb645b1f0243a13d31fc61b2ebaa3ff906`. Earlier ranges retained exactly; current document QC is scoped and package QC remains unselected. The containing DOCS-008 completion commit is the retained source checkpoint for the next reset.
@@ -142,3 +144,7 @@ Retained prior checkpoint 2488208a4b5f0236795866a474aa4412f90f536e, all product 
 ## Scope 3 decision summary
 
 No new material choice: carried the human-approved whole-projection min-y rule forward. A straddling projection is hidden; visibility is independent of landing/drop. Phase 3 is intentionally one narrow delivery milestone. Basis: user-approved initial scope sequence and autoloop delegation; initial human decisions remain accepted, these additional details are agent-owned. Applicability: this and later scopes; active unless changed by user steering or a discovered conflict.
+
+## Scope 3 completion and protected range
+
+Scope: Conditional ghost visibility. Current owned phase: 3; task range T-021–T-023. PLAN SHA-256 `44be4b64bb7b7133faf52ebb0641eb51398ba01f8124cc8627836111010e9298`; TASKS SHA-256 `f8953d44f735c393ef5e8e491af341b8e77fa83689121e90d5a7d65b8a791d7d`. Earlier ranges retained exactly; current document QC is scoped and package QC remains unselected. The containing DOCS-008 completion commit is the retained source checkpoint for the next reset.

@@ -103,3 +103,21 @@ Each phase’s final milestone has exactly one phase review task. Delivery miles
         - [ ] T-020 — Review, test and report phase 2
             Scope: whole phase implementation, integration boundaries, scoped PLAN exits, reports and carried findings. Depends on: T-013, T-016, T-019 and verified completion/closure of delivery milestones 2.1, 2.2, 2.3.
             Evidence: separate code review and required type/unit/integration/browser/build evidence; repair blockers, retain `docs/dev/reports/phases/2/PHASE-REPORT.md` and HANDOFF with initial completion. Aggregate unresolved milestone TODOs with evidence/rationale/options/owners. If this is the final phase of the complete intended list, include `docs/dev/reports/IMPLEMENTATION-REPORT.md` and final TODO aggregation. Do not claim release publication before verified integration/tag/release operations.
+
+## Phase 3 — Conditional ghost visibility
+
+- [ ] Phase 3 — Conditional ghost visibility
+    - [ ] Milestone 3.1 — Dynamic projection visibility
+        - [ ] T-021 — Apply the whole-projection midline predicate
+            Scope: src/browser/view.ts and focused unit/visual fixtures. Contracts: V01, E02, Q01, narrowed to this phase’s PLAN scope.
+            Depends on: T-020. Predecessor phase must also be integrated/published and its milestone closures verified.
+            Evidence: min projected y ≥ 10 shows; min y 9 and straddling cells hide. Test active piece above a lower projection; do not change landing/source/timers.
+        - [ ] T-022 — Verify and document dynamic ghost delivery
+            Scope: tests/e2e, docs/user, version metadata and RELEASE-NOTES.md. Contracts: V01, E02, Q01, narrowed to this phase’s PLAN scope.
+            Depends on: T-021.
+            Evidence: In both browsers exercise boundary/rotation/reappearance and hidden-ghost hard drop; run enhanced regressions and static build, prepare v0.3.0 notes. Verify whole visibility milestone.
+            Milestone boundary: after this implementation and all prior milestone tasks, review the whole capability’s code/dependencies, execute required acceptance/regressions, repair blockers and commit report `docs/dev/reports/phases/3/3.1.md` plus HANDOFF with this task’s result and initial checkbox. Include findings and TODOs (None when empty); close/read back all task issues before closing the milestone.
+    - [ ] Milestone 3.2 — Phase review
+        - [ ] T-023 — Review, test and report phase 3
+            Scope: whole phase implementation, integration boundaries, scoped PLAN exits, reports and carried findings. Depends on: T-022 and verified completion/closure of delivery milestones 3.1.
+            Evidence: separate code review and required type/unit/integration/browser/build evidence; repair blockers, retain `docs/dev/reports/phases/3/PHASE-REPORT.md` and HANDOFF with initial completion. Aggregate unresolved milestone TODOs with evidence/rationale/options/owners. If this is the final phase of the complete intended list, include `docs/dev/reports/IMPLEMENTATION-REPORT.md` and final TODO aggregation. Do not claim release publication before verified integration/tag/release operations.
