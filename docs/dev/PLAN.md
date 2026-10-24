@@ -141,3 +141,31 @@ Exactly one phase code-review/testing/report outcome after every delivery milest
 Phase exits: Earn/spend/cap bonuses, activate with B, traverse occupied rows without destroying cells, reject infeasible transforms and lock legally under the same timing lifecycle. Verify white rendering, dynamic ghost/deep drop agreement and ordinary regressions in both browsers. Prepare v0.4.0 delivery.
 
 Integration/release boundary: complete all phase tasks/reports and applicable hosted closures, explicitly integrate into the recorded target, verify the merged build and relevant regressions, publish/read back the default-branch release commit/tag, then publish release notes for v0.4.0. A partial phase stops on its working branch. No later capability is required for this phase’s scoped exit.
+
+## Phase 5 — Session-only configuration
+
+Outcome and included scope: Six validated side-panel settings, per-piece effective lock policies, immediate display/action availability and next-piece preview. Keep all configuration memory-only and reload-defaulted.
+
+Dependency: Phase 4 verified, integrated and published.
+
+Contracts: C01, configuration session boundary, preserved P/V/E/B contracts. Target release: v0.5.0.
+
+### Milestone 5.1 — Configuration and effective locking
+
+Players can change controls without resetting the board or altering an existing piece deadline.
+
+Exit: demonstrate this integrated capability, review its code and relevant dependencies, run focused acceptance/regressions, repair blockers and retain a milestone report/HANDOFF. TASKS assigns these obligations to the appropriate final boundary task under the review-unit policy. Feedback may support a human decision to continue, amend, simplify or stop; it does not automatically change authorized scope.
+
+### Milestone 5.2 — Preview and session delivery
+
+Demonstrate useful next-piece feedback and configuration behavior throughout a complete run and reload.
+
+Exit: demonstrate this integrated capability, review its code and relevant dependencies, run focused acceptance/regressions, repair blockers and retain a milestone report/HANDOFF. TASKS assigns these obligations to the appropriate final boundary task under the review-unit policy. Feedback may support a human decision to continue, amend, simplify or stop; it does not automatically change authorized scope.
+
+### Milestone 5.3 — Phase review
+
+Exactly one phase code-review/testing/report outcome after every delivery milestone is verified and closed. Verify cross-milestone behavior, the phase exits below and carried findings; repair blockers, retain the phase report and aggregate deferred TODOs. When this is the final phase of the complete intended task list, also retain the final implementation report/TODO aggregation. This special review milestone is not a delivery-count target.
+
+Phase exits: Demonstrate every setting, disabled action, retained hold state, both general policies and hard-drop override; verify next peek purity, next-piece policy adoption, restart retention and reload defaults with no persistence/URL effects in both browsers. Prepare v0.5.0 package.
+
+Integration/release boundary: complete all phase tasks/reports and applicable hosted closures, explicitly integrate into the recorded target, verify the merged build and relevant regressions, publish/read back the default-branch release commit/tag, then publish release notes for v0.5.0. A partial phase stops on its working branch. No later capability is required for this phase’s scoped exit.
