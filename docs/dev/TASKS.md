@@ -207,3 +207,39 @@ Each phase’s final milestone has exactly one phase review task. Delivery miles
         - [ ] T-040 — Review, test and report phase 5
             Scope: whole phase implementation, integration boundaries, scoped PLAN exits, reports and carried findings. Depends on: T-036, T-039 and verified completion/closure of delivery milestones 5.1, 5.2.
             Evidence: separate code review and required type/unit/integration/browser/build evidence; repair blockers, retain `docs/dev/reports/phases/5/PHASE-REPORT.md` and HANDOFF with initial completion. Aggregate unresolved milestone TODOs with evidence/rationale/options/owners. If this is the final phase of the complete intended list, include `docs/dev/reports/IMPLEMENTATION-REPORT.md` and final TODO aggregation. Do not claim release publication before verified integration/tag/release operations.
+
+## Phase 6 — Configuration persistence
+
+- [ ] Phase 6 — Configuration persistence
+    - [ ] Milestone 6.1 — Validated restoration before play
+        - [ ] T-041 — Define external schema parsing and independent resolution
+            Scope: src/config/codec.ts, persistence.ts and pure source fixtures. Contracts: C02 and CONFIGURATION persistence schema; preserved C01 gameplay timing, narrowed to this phase’s PLAN scope.
+            Depends on: T-040. Predecessor phase must also be integrated/published and its milestone closures verified.
+            Evidence: Exact case-sensitive names/values; malformed/empty/duplicate recognized sources fall through per field. Valid explicit URL defaults win and omissions preserve cookies.
+        - [ ] T-042 — Implement protected settings-cookie access
+            Scope: src/config/browser-storage.ts and adapter/integration tests. Contracts: C02 and CONFIGURATION persistence schema; preserved C01 gameplay timing, narrowed to this phase’s PLAN scope.
+            Depends on: T-041.
+            Evidence: Read/write only tetris.<key> cookies with exact lifetime/path/samesite/HTTPS attributes, preserve other cookies and retain memory on blocked access/readback failure.
+        - [ ] T-043 — Integrate startup restoration and explicit URL cookie saves
+            Scope: src/config/persistence.ts, src/browser/runtime.ts and bootstrap tests. Contracts: C02 and CONFIGURATION persistence schema; preserved C01 gameplay timing, narrowed to this phase’s PLAN scope.
+            Depends on: T-041, T-042.
+            Evidence: Resolve before first spawn, save every valid explicit URL field including defaults, never overwrite omitted/invalid fields and allow remaining sources when one read channel fails. Verify whole restoration milestone.
+            Milestone boundary: after this implementation and all prior milestone tasks, review the whole capability’s code/dependencies, execute required acceptance/regressions, repair blockers and commit report `docs/dev/reports/phases/6/6.1.md` plus HANDOFF with this task’s result and initial checkbox. Include findings and TODOs (None when empty); close/read back all task issues before closing the milestone.
+    - [ ] Milestone 6.2 — Synchronized edits and durable delivery
+        - [ ] T-044 — Synchronize query edits and independent save outcomes
+            Scope: src/config/browser-storage.ts, persistence.ts, runtime.ts and integration tests. Contracts: C02 and CONFIGURATION persistence schema; preserved C01 gameplay timing, narrowed to this phase’s PLAN scope.
+            Depends on: T-043.
+            Evidence: Replace only the edited query setting with history.replaceState, preserve unrelated parameters/fragment semantically and attempt cookie/history writes independently, including same-value edits; no recursion/navigation.
+        - [ ] T-045 — Verify reload, precedence and channel-failure scenarios
+            Scope: tests/e2e, tests/unit and tests/integration fixtures. Contracts: C02 and CONFIGURATION persistence schema; preserved C01 gameplay timing, narrowed to this phase’s PLAN scope.
+            Depends on: T-044.
+            Evidence: In both browsers run mixed sources, explicit defaults, omissions, invalid/duplicate values, isolated control edits, cookie/history/both failures, restart and actual reload. Gameplay configuration timing remains unchanged.
+        - [ ] T-046 — Prepare durable-settings guidance and package
+            Scope: docs/user, README.md, version metadata and RELEASE-NOTES.md. Contracts: C02 and CONFIGURATION persistence schema; preserved C01 gameplay timing, narrowed to this phase’s PLAN scope.
+            Depends on: T-044, T-045.
+            Evidence: Document names/domains/precedence, one-origin cookie namespace, blocked-channel limits and reload behavior. Build assets, prepare v0.6.0 notes and verify whole synchronization milestone.
+            Milestone boundary: after this implementation and all prior milestone tasks, review the whole capability’s code/dependencies, execute required acceptance/regressions, repair blockers and commit report `docs/dev/reports/phases/6/6.2.md` plus HANDOFF with this task’s result and initial checkbox. Include findings and TODOs (None when empty); close/read back all task issues before closing the milestone.
+    - [ ] Milestone 6.3 — Phase review
+        - [ ] T-047 — Review, test and report phase 6
+            Scope: whole phase implementation, integration boundaries, scoped PLAN exits, reports and carried findings. Depends on: T-043, T-046 and verified completion/closure of delivery milestones 6.1, 6.2.
+            Evidence: separate code review and required type/unit/integration/browser/build evidence; repair blockers, retain `docs/dev/reports/phases/6/PHASE-REPORT.md` and HANDOFF with initial completion. Aggregate unresolved milestone TODOs with evidence/rationale/options/owners. If this is the final phase of the complete intended list, include `docs/dev/reports/IMPLEMENTATION-REPORT.md` and final TODO aggregation. Do not claim release publication before verified integration/tag/release operations.

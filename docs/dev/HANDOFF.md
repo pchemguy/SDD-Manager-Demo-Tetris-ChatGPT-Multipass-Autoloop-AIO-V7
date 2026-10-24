@@ -1,6 +1,6 @@
 # Project handoff
 
-Checkpoint: reset to documentation scope 6 — Configuration persistence.
+Checkpoint: documentation scope 6 — Configuration persistence, DOCS-008 completion.
 The containing commit identifies this snapshot. Read later DOCS_PREPARATION/task/Git evidence before continuation; this file does not certify its subsequent push or hosted effects.
 
 ## Workflow and sources
@@ -23,6 +23,6 @@ The containing commit identifies this snapshot. Read later DOCS_PREPARATION/task
 
 ## Pending work and next action
 
-- Publish/read back this reset and reopen/read back issues #2–9; confirm all eight open and milestone #1 open before PROJECT edits.
-- Resume DOCS-002 after all required reopenings are verified; retained product documents are inputs, not newly approved output.
+- Publish/read back this completion commit and close/read back issue #8; these are pending until actual observations confirm them.
+- Final autoloop boundary reached after publication/issue readback. Leave DOCS-009 and milestone #1 open; request no implementation implicitly. The next human-selected stage may be DOCS-009 package QC. No merge, product task projection, release or implementation is authorized here.
 - A fresh clone cannot recover ignored credentials; supply hosting access separately. Application tests and releases are not performed by this preparation.
