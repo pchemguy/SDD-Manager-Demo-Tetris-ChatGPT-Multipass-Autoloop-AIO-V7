@@ -1,32 +1,28 @@
 # Project handoff
 
-Checkpoint: first PROJECT proposal; human acceptance pending.
-This snapshot is identified by its containing commit. Recover later records and Git before continuation.
-
-Outcome: initialization commit e8cf495287969eaf7d3c5e0f400eef066fe0cc9a is pushed/readback verified and issue #1 is closed/readback verified. Four root files remain preserved. The [PROJECT proposal](PROJECT.md) covers only classic gameplay; later scope and proposed interactions remain in DOCS_PREPARATION. No product code or accepted brief exists.
+Checkpoint: documentation scope 1 — Playable classic baseline, DOCS-008 completion.
+The containing commit identifies this snapshot. Read later DOCS_PREPARATION/task/Git evidence before continuation; this file does not certify its subsequent push or hosted effects.
 
 ## Workflow and sources
 
-- Workflow/stage/owner: main development, greenfield documentation preparation; sdd-manage coordinating sdd-design.
-- Governing records: [DOCS_TASKS](DOCS_TASKS.md) owns checkoffs; [DOCS_PREPARATION](DOCS_PREPARATION.md) owns scope sequence, proposed decisions, evidence and actual gates.
-- Package: repository .agents/plugins/sdd-manager, version 0.15.2; root AGENTS and browser/shell policies govern. Linux execution host; Node v24.22.1, Python 3.12.14 and Git available. No application dependencies or browsers provisioned.
+- Workflow: main greenfield preparation, autodoc/autoloop, strict multipass; sdd-manage coordinates focused document owners.
+- Sources: [DOCS_TASKS](DOCS_TASKS.md) owns checkoffs, [DOCS_PREPARATION](DOCS_PREPARATION.md) owns six-scope control/decisions/evidence, [PROJECT](PROJECT.md) owns current intended product scope.
+- Package: repository SDD Manager 0.15.2, root AGENTS/browser policies and preserved discovery guidance. Linux host, Node/Python/Git available. No application or browser installation is claimed.
 
 ## Scope and human decisions
 
-- Authorized: six user-defined cumulative documentation passes, autodoc/autoloop, strict delivery preservation.
-- Next human checkpoint: first PROJECT approval before architecture. Later PROJECT approvals are waived; later document checkpoints are preapproved within the selected mode after that approval.
-- Exact loop stop: final DOCS-008, before package QC, documentation integration or implementation. Implementation and releases require subsequent implementation authorization.
-- Tracking: enabled by existing AGENTS for preparation/implementation. Milestone #1 and issues #1–9 content/associations verified before writes. Publish/read back each owned commit. Subsequent reporting Standard.
+- User accepted initial proposal e5fa48fd34e3f38bd99d3872c861313362478add and cross-scope decisions on 2026-10-24. Later PROJECT/document checkpoints and predefined resets are covered by autodoc/autoloop; new material decisions are delegated with rationale.
+- Preserve earlier PLAN/TASKS ranges exactly. Authorized sequence ends after scope 6 DOCS-008, before DOCS-009, whole-package QC, documentation integration and implementation.
+- Tracking enabled by existing AGENTS; reuse milestone #1 and issues #1–9. Publish/read back every owned commit and verify its hosted transition before dependent work. Reporting: Standard.
 
 ## Branches and return
 
-- Working: design-docs/main.
-- Creation parent / integration target: main.
+- Working branch: design-docs/main; creation parent/integration target: main.
 - Branch-off: 62169f0ad3764882e22400b4881903758c88d94b.
-- No suspended parent workflow. Retain design-docs/ai-logs; its preliminary setup is already integrated.
+- Provenance branch design-docs/ai-logs is retained and its preliminary scaffold already integrated. No suspended parent implementation exists.
 
 ## Pending work and next action
 
-- Confirm publication of this proposal, then obtain first PROJECT approval covering the presented baseline and cross-scope proposals. DOCS-002 remains unchecked and issue #2 open; do not write ARCHITECTURE before approval.
-- On acceptance, persist exact accepted content, decision evidence and checked DOCS-002 together; publish/read back and close/read back issue #2. Continue the agreed autoloop only within its retained mode and final DOCS-008 stop.
-- No implementation or release is complete. Credentials and ignored inputs are not recoverable from a clone; supply hosting access separately when needed.
+- Publish/read back this completion commit and close/read back issue #8; these are pending until actual observations confirm them.
+- Then perform the authorized reset to scope 2: retain all product documents and protected ranges, uncheck DOCS-002–009 in one reset commit, push/read back, reopen/read back the same eight issues and confirm milestone open before PROJECT revision.
+- A fresh clone cannot recover ignored credentials; supply hosting access separately. Application tests and releases are not performed by this preparation.
