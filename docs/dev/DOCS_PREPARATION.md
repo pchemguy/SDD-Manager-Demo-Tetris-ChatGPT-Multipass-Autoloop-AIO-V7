@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested in the project prompt of 2026-10-24.
 - Delivery mode: strict multipass. Preserve established phase/task IDs, names, scope, parentage, order, dependencies and exits; add later scope in subsequent bounded ranges. No flexible exception is granted.
-- Current pass: 1. Cursor: DOCS-004 accepted/preapproved; finish publication and hosted closure before advancing.
+- Current pass: 1. Cursor: DOCS-005 accepted/preapproved; finish publication and hosted closure before advancing.
 - Approval basis: first PROJECT and recorded cross-scope proposals approved by the user’s “Approve” reply on 2026-10-24, accepting published proposal e5fa48fd34e3f38bd99d3872c861313362478add. Later PROJECT approvals are waived under the announced autoloop selection; subsequent document checkpoints through TASKS are preapproved. Initial approval authorizes the agreed six-pass sequence and resets. New material autoloop decisions are delegated after that approval, with recorded rationale and visible updates.
 - Tracking: enabled for preparation and implementation by existing root AGENTS.md. Milestone `sdd-docs-main` #1 and DOCS-001–009 issues #1–9 were created and read back with exact standard content and associations before the first repository modification.
 - Publication: push/read back every owned commit before further work. Actual default/integration target is `main`.
@@ -73,7 +73,7 @@ Material decision status: the product/interaction recommendations above are acce
 
 ## Pending transitions
 
-Publish/read back the current completion commit and close/read back issue #4. Then continue in dependency order within the six-pass sequence. Final stop: pass 6 DOCS-008, before DOCS-009, package integration or implementation.
+Publish/read back the current completion commit and close/read back issue #5. Then continue in dependency order within the six-pass sequence. Final stop: pass 6 DOCS-008, before DOCS-009, package integration or implementation.
 
 ## Active-pass document evidence
 
@@ -81,3 +81,5 @@ Publish/read back the current completion commit and close/read back issue #4. Th
 - Pass 1, DOCS-003: `ARCHITECTURE.md` SHA-256 `f9996c379aa8ccaab7a6c3a27470407a521bf7635f0a658c46d2cbdf31704561`. Scoped autodoc/autoloop preapproval from the user-approved initial sequence; current-scope conformance/content review passed. Ownership, dependency direction, time/random injection and browser/core separation reviewed; no cycles or duplicate state owners required. Publication and issue #3 closure require readback after the containing commit.
 
 - Pass 1, DOCS-004: `DECOMPOSITION.md` SHA-256 `7adb4ecc97001d962cd3a4e6a295a43ba9aeec74ab1b747bd498a3931cca4e3b`. Scoped autodoc/autoloop preapproval from the user-approved initial sequence; current-scope conformance/content review passed. Component interfaces, state/resource ownership, rejection/failure and verification seams reviewed against architecture. Publication and issue #4 closure require readback after the containing commit.
+
+- Pass 1, DOCS-005: `SPEC.md` SHA-256 `a2af25d0a97850759fa172fabc11907ab9bce9d23ffd208cff6785e4fc09dd4d`; `SPEC-REVIEW-REPORT.md` SHA-256 `723c5dc6509650e8de6de2d6d706a5e0ec657c4cc2cd4f51878bc8e5959ef23f`. Scoped autodoc/autoloop preapproval from the user-approved initial sequence; current-scope conformance/content review passed. Current review: SPEC-REVIEW-REPORT.md.  Publication and issue #5 closure require readback after the containing commit.
