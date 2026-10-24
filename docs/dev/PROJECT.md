@@ -14,6 +14,10 @@ Display the dynamic ghost only when its entire landing projection is in the lowe
 
 A four-line clear earns one penetrator activation bonus, capped at three. Activation makes the current piece entirely white and allows it to traverse settled blocks without removing them until it locks at a valid non-overlapping landing. Hard drop and ghost use that same lowest valid landing. Hold is unavailable during penetration. Show one bonus symbol per available activation.
 
+The side panel provides ghost visibility (hide/dynamic/show), hard-drop availability, next-piece preview, general and hard-drop locking policies, and hold availability. Defaults preserve dynamic ghost visibility, enabled hold/hard drop/preview, full-interval general locking and hard drop following that policy. Availability/display changes apply immediately; locking selections apply to the next active piece. Settings survive a game restart.
+
+Keep configuration in memory for the current page only. Reload restores defaults; cookies, URL parameters and browser storage do not restore or save settings.
+
 ## Interaction and quality
 
 Use TypeScript for game-state checks, Canvas for the board and ordinary DOM controls/status. Keep game rules independently testable from drawing, input and browser storage. Suspend gameplay on hidden pages or lost game focus and require deliberate resumption; suspension never advances game timers. Provide legible controls, visible keyboard focus and readable game-over/score status.
