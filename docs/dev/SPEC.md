@@ -70,6 +70,18 @@ Space hard-drops to exactly this projection in one action and adds no score. By 
 
 The dynamic ghost is visible exactly when a projection exists and every projected cell has y ≥ 10. Thus min(y)=9 hides it, min(y)=10 shows it, and any projection straddling rows 9/10 is hidden. Evaluate projected cells, not the active piece, anchor, center or average. Hiding never changes the landing or hard-drop result. Game over has no active/ghost layer; suspension retains the current projection/visibility.
 
+## P01 — Bonus and activation
+
+A single atomic four-line clear awards one bonus, capped at three, for either ordinary or penetrator pieces. Other clear counts award none. Start/restart at zero. B with game focus activates penetration only while running, when an ordinary active piece and at least one bonus exist and a valid landing at/below its current anchor exists. Spend exactly one bonus on successful activation. Ignore repeat events and reject a second activation of an already penetrator piece without spending. The ability cannot be switched off, refunded or stored; it ends on lock/game over. Hold is unavailable while it is active regardless of configuration. Keep normal hold eligibility unchanged by activation itself.
+
+## P02 — Traversal, landing and locking
+
+For the current orientation/x, enumerate anchors y′ ≥ current y for which all four cells are inside and non-overlapping. The penetrator landing is the greatest such y′, irrespective of overlap at intervening anchors. Ordinary landing retains the first-barrier rule. Gravity/soft descent advance one row toward the penetrator landing, allowing transient overlap; do not advance past that landing or outside the board. At that anchor the penetrator is grounded even if lower anchors are invalid. Hard drop moves directly to it. Ghost uses the identical query.
+
+Translation/rotation may allow transient overlap, but all cells must remain inside and there must still be a valid landing at/below the candidate anchor. Reject a transform with no such landing. Rotation evaluates SRS candidates in order under this rule. Activation failure leaves bonus, piece and timer unchanged. Activation while grounded cancels grounding if the new landing is lower; otherwise retain the existing deadline. Activation is never a manual timer reset.
+
+Every lock path validates non-overlap; a failed downward attempt during an overlapping transit is not a lock opportunity. Under failed-down locking, only an attempted descent from the valid landing locks. Timer locking begins only at that landing. Merge never deletes or overwrites existing cells. Show active penetrators entirely white, and retain white appearance for their settled cells until cleared. Render their ghost in distinguishable white outline/transparency. Regular active/held/preview/settled pieces use the non-white palette. Show exactly one lightning symbol per bonus and readable numeric text; update from the atomic activation/clear snapshot.
+
 ## Q01 — Required verification
 
 Use deterministic random streams and explicit time in core checks. Exercise each success/rejection boundary plus spawn failure, multi-row compaction, four rotations, score updates, restart, suspension and resource disposal. Browser acceptance requires isolated Chromium and Playwright-managed Firefox through the actual application runner, with keyboard interaction, form focus, Canvas/status inspection, screenshots and repeated isolated context/page teardown. Browser identity/provisioning must satisfy BROWSER_DEV_POLICY; a synthetic page proves facilities only, not application acceptance. Pin dependency versions and lockfile when implementing; unit checks cannot replace browser evidence. Do not silently drop a required browser or claim a release from document checks.
@@ -81,3 +93,4 @@ Use deterministic random streams and explicit time in core checks. Exercise each
 | B01–B06 | Start, translate, rotate, descend, lock, clear/score, block spawn and restart; assert exact board/score, focus/suspension and one-loop lifetime |
 | E01–E02 / B04 | Two complete bags; empty/populated/repeated hold and blocked replacement; SRS success/rejection; ghost/drop identity; timer at 999/1000 ms and no grounded reset |
 | V01 | Project above, at and across midline; move active piece above a lower-half projection; hidden ghost does not change hard drop |
+| P01–P02 | Earn/spend/cap inventory; cross an occupied barrier to a deeper legal landing; reject stranded transform; lock without overwrite; hold disabled; white colors and exact symbols |
