@@ -16,6 +16,7 @@ The root guidance/policy files, bundled agent packages and docs/dev preparation 
 | C08 Runtime | src/browser/runtime.ts; src/main.ts composition entry | tests/integration/runtime.test.ts; tests/e2e/lifecycle.spec.ts |
 | Static build | index.html; package.json and lockfile; tsconfig.json; vite.config.ts | typecheck/build scripts and built-app smoke coverage |
 | Test harness | vitest.config.ts; playwright.config.ts; tests/support | Unit/integration commands and actual static-server browser suite |
+| C09 Landing and rotation fixtures | src/core/landing.ts; geometry.ts remains canonical shape/kick owner | tests/unit/landing.test.ts; tests/fixtures/rotation; tests/e2e/enhancements.spec.ts |
 
 ## Dependency and placement rules
 
