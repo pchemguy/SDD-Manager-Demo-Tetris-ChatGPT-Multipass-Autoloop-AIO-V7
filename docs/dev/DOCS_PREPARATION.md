@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested in the project prompt of 2026-10-24.
 - Delivery mode: strict multipass. Preserve established phase/task IDs, names, scope, parentage, order, dependencies and exits; add later scope in subsequent bounded ranges. No flexible exception is granted.
-- Current pass: 1. Cursor: DOCS-002 accepted/preapproved; finish publication and hosted closure before advancing.
+- Current pass: 1. Cursor: DOCS-003 accepted/preapproved; finish publication and hosted closure before advancing.
 - Approval basis: first PROJECT and recorded cross-scope proposals approved by the user’s “Approve” reply on 2026-10-24, accepting published proposal e5fa48fd34e3f38bd99d3872c861313362478add. Later PROJECT approvals are waived under the announced autoloop selection; subsequent document checkpoints through TASKS are preapproved. Initial approval authorizes the agreed six-pass sequence and resets. New material autoloop decisions are delegated after that approval, with recorded rationale and visible updates.
 - Tracking: enabled for preparation and implementation by existing root AGENTS.md. Milestone `sdd-docs-main` #1 and DOCS-001–009 issues #1–9 were created and read back with exact standard content and associations before the first repository modification.
 - Publication: push/read back every owned commit before further work. Actual default/integration target is `main`.
@@ -73,8 +73,9 @@ Material decision status: the product/interaction recommendations above are acce
 
 ## Pending transitions
 
-Publish/read back the current completion commit and close/read back issue #2. Then continue in dependency order within the six-pass sequence. Final stop: pass 6 DOCS-008, before DOCS-009, package integration or implementation.
+Publish/read back the current completion commit and close/read back issue #3. Then continue in dependency order within the six-pass sequence. Final stop: pass 6 DOCS-008, before DOCS-009, package integration or implementation.
 
 ## Active-pass document evidence
 
 - Pass 1, DOCS-002: `PROJECT.md` SHA-256 `33acd8f5dc87a14c08d80ec3d2594cd4dff3df7ce61b3d72613216d1a6ffbf23`. Human acceptance of exact proposal e5fa48fd34e3f38bd99d3872c861313362478add on 2026-10-24; unchanged brief bytes retained. Scope and boundary review passed; later document approvals are covered by autodoc/autoloop. Publication and issue #2 closure require readback after the containing commit.
+- Pass 1, DOCS-003: `ARCHITECTURE.md` SHA-256 `f9996c379aa8ccaab7a6c3a27470407a521bf7635f0a658c46d2cbdf31704561`. Scoped autodoc/autoloop preapproval from the user-approved initial sequence; current-scope conformance/content review passed. Ownership, dependency direction, time/random injection and browser/core separation reviewed; no cycles or duplicate state owners required. Publication and issue #3 closure require readback after the containing commit.
