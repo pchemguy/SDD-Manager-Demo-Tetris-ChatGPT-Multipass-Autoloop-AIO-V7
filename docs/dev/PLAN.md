@@ -85,3 +85,25 @@ Exactly one phase code-review/testing/report outcome after every delivery milest
 Phase exits: Demonstrate hold/replacement, wall kicks and ghost/drop agreement under 1000 ms grounding delay, including failed moves, grounded transformations and hold boundaries. Re-run prior useful gameplay in both browsers, update guides/build/version and review the composed lifecycle.
 
 Integration/release boundary: complete all phase tasks/reports and applicable hosted closures, explicitly integrate into the recorded target, verify the merged build and relevant regressions, publish/read back the default-branch release commit/tag, then publish release notes for v0.2.0. A partial phase stops on its working branch. No later capability is required for this phase’s scoped exit.
+
+## Phase 3 — Conditional ghost visibility
+
+Outcome and included scope: Dynamic ghost rendering only; hide upper-half and straddling projections while preserving landing/drop geometry and enhanced gameplay.
+
+Dependency: Phase 2 verified, integrated and published.
+
+Contracts: V01, E02, Q01. Target release: v0.3.0.
+
+### Milestone 3.1 — Dynamic projection visibility
+
+A player can see the ghost disappear/reappear around the midline without movement or timing changes.
+
+Exit: demonstrate this integrated capability, review its code and relevant dependencies, run focused acceptance/regressions, repair blockers and retain a milestone report/HANDOFF. TASKS assigns these obligations to the appropriate final boundary task under the review-unit policy. Feedback may support a human decision to continue, amend, simplify or stop; it does not automatically change authorized scope.
+
+### Milestone 3.2 — Phase review
+
+Exactly one phase code-review/testing/report outcome after every delivery milestone is verified and closed. Verify cross-milestone behavior, the phase exits below and carried findings; repair blockers, retain the phase report and aggregate deferred TODOs. When this is the final phase of the complete intended task list, also retain the final implementation report/TODO aggregation. This special review milestone is not a delivery-count target.
+
+Phase exits: Demonstrate visibility at min projected row 9 versus 10 and for straddling/rotated pieces in both browsers; hard drop still lands identically when the ghost is hidden. Update guidance and v0.3.0 package.
+
+Integration/release boundary: complete all phase tasks/reports and applicable hosted closures, explicitly integrate into the recorded target, verify the merged build and relevant regressions, publish/read back the default-branch release commit/tag, then publish release notes for v0.3.0. A partial phase stops on its working branch. No later capability is required for this phase’s scoped exit.
