@@ -18,6 +18,7 @@ The root guidance/policy files, bundled agent packages and docs/dev preparation 
 | Test harness | vitest.config.ts; playwright.config.ts; tests/support | Unit/integration commands and actual static-server browser suite |
 | C09 Landing and rotation fixtures | src/core/landing.ts; geometry.ts remains canonical shape/kick owner | tests/unit/landing.test.ts; tests/fixtures/rotation; tests/e2e/enhancements.spec.ts |
 | Dynamic ghost visibility | src/browser/view.ts; a pure exported predicate may be colocated there | tests/unit/ghost-visibility.test.ts; tests/e2e/ghost.spec.ts |
+| Penetrator policy/inventory/appearance | landing.ts and game.ts own rules; board.ts retains settled appearance; view.ts owns rendering | tests/fixtures/penetration; tests/unit/penetration.test.ts; tests/e2e/penetrator.spec.ts |
 
 ## Dependency and placement rules
 
