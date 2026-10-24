@@ -171,3 +171,39 @@ Each phase’s final milestone has exactly one phase review task. Delivery miles
         - [ ] T-033 — Review, test and report phase 4
             Scope: whole phase implementation, integration boundaries, scoped PLAN exits, reports and carried findings. Depends on: T-026, T-029, T-032 and verified completion/closure of delivery milestones 4.1, 4.2, 4.3.
             Evidence: separate code review and required type/unit/integration/browser/build evidence; repair blockers, retain `docs/dev/reports/phases/4/PHASE-REPORT.md` and HANDOFF with initial completion. Aggregate unresolved milestone TODOs with evidence/rationale/options/owners. If this is the final phase of the complete intended list, include `docs/dev/reports/IMPLEMENTATION-REPORT.md` and final TODO aggregation. Do not claim release publication before verified integration/tag/release operations.
+
+## Phase 5 — Session-only configuration
+
+- [ ] Phase 5 — Session-only configuration
+    - [ ] Milestone 5.1 — Configuration and effective locking
+        - [ ] T-034 — Define validated session configuration state
+            Scope: src/config/settings.ts, codec.ts and domain/default tests. Contracts: C01, configuration session boundary, preserved P/V/E/B contracts, narrowed to this phase’s PLAN scope.
+            Depends on: T-033. Predecessor phase must also be integrated/published and its milestone closures verified.
+            Evidence: All six domains/defaults match CONFIGURATION; reject invalid intents, retain values over restart and use no persistence source or sink.
+        - [ ] T-035 — Apply per-piece general and hard-drop locking policies
+            Scope: src/core/game.ts, src/browser/runtime.ts and timing fixtures. Contracts: C01, configuration session boundary, preserved P/V/E/B contracts, narrowed to this phase’s PLAN scope.
+            Depends on: T-034.
+            Evidence: Spawn/hold replacement snapshots policies; failed descent locks only at a valid landing, interval timing remains unchanged and immediate hard drop locks synchronously only when enabled.
+        - [ ] T-036 — Integrate labeled configuration controls and live gates
+            Scope: src/browser/view.ts, input.ts, runtime.ts and browser checks. Contracts: C01, configuration session boundary, preserved P/V/E/B contracts, narrowed to this phase’s PLAN scope.
+            Depends on: T-034, T-035.
+            Evidence: Native controls preserve keyboard focus, immediate toggles do not reset timers/hold eligibility, selected lock changes affect next piece and penetration still blocks hold. Verify whole configuration/locking milestone.
+            Milestone boundary: after this implementation and all prior milestone tasks, review the whole capability’s code/dependencies, execute required acceptance/regressions, repair blockers and commit report `docs/dev/reports/phases/5/5.1.md` plus HANDOFF with this task’s result and initial checkbox. Include findings and TODOs (None when empty); close/read back all task issues before closing the milestone.
+    - [ ] Milestone 5.2 — Preview and session delivery
+        - [ ] T-037 — Integrate pure next-piece preview
+            Scope: src/browser/view.ts, src/core/source.ts and source/UI fixtures. Contracts: C01, configuration session boundary, preserved P/V/E/B contracts, narrowed to this phase’s PLAN scope.
+            Depends on: T-036.
+            Evidence: Display the next type in spawn orientation, hide without drawing, advance after lock/empty hold and remain stable on occupied hold swap; regular colors are non-white.
+        - [ ] T-038 — Verify session settings and gameplay interaction matrix
+            Scope: tests/e2e and unit/integration coverage. Contracts: C01, configuration session boundary, preserved P/V/E/B contracts, narrowed to this phase’s PLAN scope.
+            Depends on: T-037.
+            Evidence: Exercise all values, both lock settings combinations, hard-drop off, hold gates, ghost modes, paused changes, next preview, restart retention and reload defaults even with settings-like URL/cookies. Verify no storage/history side effects in both browsers.
+        - [ ] T-039 — Prepare configuration guidance and static package
+            Scope: docs/user, README.md, version metadata and RELEASE-NOTES.md. Contracts: C01, configuration session boundary, preserved P/V/E/B contracts, narrowed to this phase’s PLAN scope.
+            Depends on: T-037, T-038.
+            Evidence: Document defaults, per-piece timing adoption, live controls and session-only lifetime; build static assets, prepare v0.5.0 notes and verify whole preview/session milestone.
+            Milestone boundary: after this implementation and all prior milestone tasks, review the whole capability’s code/dependencies, execute required acceptance/regressions, repair blockers and commit report `docs/dev/reports/phases/5/5.2.md` plus HANDOFF with this task’s result and initial checkbox. Include findings and TODOs (None when empty); close/read back all task issues before closing the milestone.
+    - [ ] Milestone 5.3 — Phase review
+        - [ ] T-040 — Review, test and report phase 5
+            Scope: whole phase implementation, integration boundaries, scoped PLAN exits, reports and carried findings. Depends on: T-036, T-039 and verified completion/closure of delivery milestones 5.1, 5.2.
+            Evidence: separate code review and required type/unit/integration/browser/build evidence; repair blockers, retain `docs/dev/reports/phases/5/PHASE-REPORT.md` and HANDOFF with initial completion. Aggregate unresolved milestone TODOs with evidence/rationale/options/owners. If this is the final phase of the complete intended list, include `docs/dev/reports/IMPLEMENTATION-REPORT.md` and final TODO aggregation. Do not claim release publication before verified integration/tag/release operations.
