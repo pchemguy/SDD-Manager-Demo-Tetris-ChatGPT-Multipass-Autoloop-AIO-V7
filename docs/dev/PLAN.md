@@ -169,3 +169,31 @@ Exactly one phase code-review/testing/report outcome after every delivery milest
 Phase exits: Demonstrate every setting, disabled action, retained hold state, both general policies and hard-drop override; verify next peek purity, next-piece policy adoption, restart retention and reload defaults with no persistence/URL effects in both browsers. Prepare v0.5.0 package.
 
 Integration/release boundary: complete all phase tasks/reports and applicable hosted closures, explicitly integrate into the recorded target, verify the merged build and relevant regressions, publish/read back the default-branch release commit/tag, then publish release notes for v0.5.0. A partial phase stops on its working branch. No later capability is required for this phase’s scoped exit.
+
+## Phase 6 — Configuration persistence
+
+Outcome and included scope: Independent per-setting URL/cookie/default restoration and cookie/query synchronization, including explicit defaults, omissions, validation and channel failures. No game-state persistence.
+
+Dependency: Phase 5 verified, integrated and published.
+
+Contracts: C02 and CONFIGURATION persistence schema; preserved C01 gameplay timing. Target release: v0.6.0.
+
+### Milestone 6.1 — Validated restoration before play
+
+A fresh page starts with the independently resolved six settings before any piece snapshots its policies.
+
+Exit: demonstrate this integrated capability, review its code and relevant dependencies, run focused acceptance/regressions, repair blockers and retain a milestone report/HANDOFF. TASKS assigns these obligations to the appropriate final boundary task under the review-unit policy. Feedback may support a human decision to continue, amend, simplify or stop; it does not automatically change authorized scope.
+
+### Milestone 6.2 — Synchronized edits and durable delivery
+
+A control edit changes one selected field and persists it without navigation, losing other values or disturbing gameplay.
+
+Exit: demonstrate this integrated capability, review its code and relevant dependencies, run focused acceptance/regressions, repair blockers and retain a milestone report/HANDOFF. TASKS assigns these obligations to the appropriate final boundary task under the review-unit policy. Feedback may support a human decision to continue, amend, simplify or stop; it does not automatically change authorized scope.
+
+### Milestone 6.3 — Phase review
+
+Exactly one phase code-review/testing/report outcome after every delivery milestone is verified and closed. Verify cross-milestone behavior, the phase exits below and carried findings; repair blockers, retain the phase report and aggregate deferred TODOs. When this is the final phase of the complete intended task list, also retain the final implementation report/TODO aggregation. This special review milestone is not a delivery-count target.
+
+Phase exits: Demonstrate mixed-source restore and actual reload persistence, explicit default cookie writes, omitted-cookie retention and independent invalid/duplicate fallback. Verify single-field URL preservation/history replacement and both channel failure directions in Chromium/Firefox. Prepare v0.6.0 package.
+
+Integration/release boundary: complete all phase tasks/reports and applicable hosted closures, explicitly integrate into the recorded target, verify the merged build and relevant regressions, publish/read back the default-branch release commit/tag, then publish release notes for v0.6.0. A partial phase stops on its working branch. No later capability is required for this phase’s scoped exit.
