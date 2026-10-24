@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested in the project prompt of 2026-10-24.
 - Delivery mode: strict multipass. Preserve established phase/task IDs, names, scope, parentage, order, dependencies and exits; add later scope in subsequent bounded ranges. No flexible exception is granted.
-- Current pass: 2. Cursor: DOCS-007 accepted/preapproved; finish publication and hosted closure before advancing.
+- Current pass: 2. Cursor: DOCS-008 accepted/preapproved; finish publication and hosted closure before advancing.
 - Approval basis: first PROJECT and recorded cross-scope proposals approved by the user’s “Approve” reply on 2026-10-24, accepting published proposal e5fa48fd34e3f38bd99d3872c861313362478add. Later PROJECT approvals are waived under the announced autoloop selection; subsequent document checkpoints through TASKS are preapproved. Initial approval authorizes the agreed six-pass sequence and resets. New material autoloop decisions are delegated after that approval, with recorded rationale and visible updates.
 - Tracking: enabled for preparation and implementation by existing root AGENTS.md. Milestone `sdd-docs-main` #1 and DOCS-001–009 issues #1–9 were created and read back with exact standard content and associations before the first repository modification.
 - Publication: push/read back every owned commit before further work. Actual default/integration target is `main`.
@@ -73,7 +73,7 @@ Material decision status: the product/interaction recommendations above are acce
 
 ## Pending transitions
 
-Publish/read back the current completion commit and close/read back issue #7. Then continue in dependency order within the six-pass sequence. Final stop: pass 6 DOCS-008, before DOCS-009, package integration or implementation.
+Publish/read back the current completion commit and close/read back issue #8. Then continue in dependency order within the six-pass sequence. Final stop: pass 6 DOCS-008, before DOCS-009, package integration or implementation.
 
 ## Active-pass document evidence
 
@@ -102,6 +102,8 @@ Publish/read back the current completion commit and close/read back issue #7. Th
 
 - Pass 2, DOCS-007: `layout.md` SHA-256 `51b307adef4cf25898475c402011ab7e8e369b838fc6780f3edc10bdf3b4e4f6`; `PLAN-REVIEW-REPORT.md` SHA-256 `c4b2bf493a03282d65a1fc6836ceb29c9ad1328d7a44b64818fc1091fda4f225`. Scoped autodoc/autoloop preapproval from the user-approved initial sequence; current-scope conformance/content review passed. Current review: PLAN-REVIEW-REPORT.md.  Publication and issue #7 closure require readback after the containing commit.
 
+- Pass 2, DOCS-008: `TASKS.md` SHA-256 `23bd860592d87719a47ab37e90e06195f95134c21093ad97cef2ac35e11cf1b3`; `TASKS-REVIEW-REPORT.md` SHA-256 `70bb6c3a8bd16d47a67afb67da07a1b9ec7025ef4c41d7678026baece78e6e44`. Scoped autodoc/autoloop preapproval from the user-approved initial sequence; current-scope conformance/content review passed. Protected earlier PLAN/TASKS text compared and preserved; current counts and concrete scope reviewed. Current review: TASKS-REVIEW-REPORT.md.  Publication and issue #8 closure require readback after the containing commit.
+
 ## Scope 1 completion and protected range
 
 Scope: Playable classic baseline. Current owned phase: 1; task range T-001–T-010. PLAN SHA-256 `5cff4b2cbc26db87ba89e7d3cc180b2af261fbc4a6afeb1cc9a9636890bc9e9c`; TASKS SHA-256 `37de6ae4bdfb041916252d19c71fb6fb645b1f0243a13d31fc61b2ebaa3ff906`. Earlier ranges retained exactly; current document QC is scoped and package QC remains unselected. The containing DOCS-008 completion commit is the retained source checkpoint for the next reset.
@@ -113,3 +115,7 @@ Retained prior checkpoint fc44b43673abfa90b7d9c432ca4969951595bcb1, all product 
 ## Scope 2 decision summary
 
 Carried the accepted hold/grounding decisions forward. Delegated detail: clockwise-only SRS uses explicit screen-y-down tables; C is hold and Space hard drop. Seven-bag uses Fisher–Yates and read-only peek. Phase 2 adds the full enhancement lifecycle without changing phase 1. Basis: user-approved initial scope sequence and autoloop delegation; initial human decisions remain accepted, these additional details are agent-owned. Applicability: this and later scopes; active unless changed by user steering or a discovered conflict.
+
+## Scope 2 completion and protected range
+
+Scope: Gameplay enhancements. Current owned phase: 2; task range T-011–T-020. PLAN SHA-256 `01be71da4b8d0ed0055564e9823bde9b46e5d7078ac9876c034cfd9f62298012`; TASKS SHA-256 `23bd860592d87719a47ab37e90e06195f95134c21093ad97cef2ac35e11cf1b3`. Earlier ranges retained exactly; current document QC is scoped and package QC remains unselected. The containing DOCS-008 completion commit is the retained source checkpoint for the next reset.

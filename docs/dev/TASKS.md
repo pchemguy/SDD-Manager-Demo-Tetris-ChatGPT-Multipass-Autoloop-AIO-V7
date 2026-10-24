@@ -53,3 +53,53 @@ Each phase’s final milestone has exactly one phase review task. Delivery miles
         - [ ] T-010 — Review, test and report phase 1
             Scope: whole phase implementation, integration boundaries, scoped PLAN exits, reports and carried findings. Depends on: T-003, T-006, T-009 and verified completion/closure of delivery milestones 1.1, 1.2, 1.3.
             Evidence: separate code review and required type/unit/integration/browser/build evidence; repair blockers, retain `docs/dev/reports/phases/1/PHASE-REPORT.md` and HANDOFF with initial completion. Aggregate unresolved milestone TODOs with evidence/rationale/options/owners. If this is the final phase of the complete intended list, include `docs/dev/reports/IMPLEMENTATION-REPORT.md` and final TODO aggregation. Do not claim release publication before verified integration/tag/release operations.
+
+## Phase 2 — Gameplay enhancements
+
+- [ ] Phase 2 — Gameplay enhancements
+    - [ ] Milestone 2.1 — Bag and held-piece lifecycle
+        - [ ] T-011 — Implement seven-bag draws and pure peek
+            Scope: src/core/source.ts and source fixtures. Contracts: E01–E02, B04, Q01; preserved base gameplay, narrowed to this phase’s PLAN scope.
+            Depends on: T-010. Predecessor phase must also be integrated/published and its milestone closures verified.
+            Evidence: Each aligned bag contains every type once; seeded order is reproducible, bag boundaries and peek do not consume extra types.
+        - [ ] T-012 — Implement hold replacement and eligibility
+            Scope: src/core/game.ts and hold fixtures. Contracts: E01–E02, B04, Q01; preserved base gameplay, narrowed to this phase’s PLAN scope.
+            Depends on: T-011.
+            Evidence: Empty hold draws once, populated swap draws none, replacement resets spawn/orientation/time, repeated use rejects and blocked replacement ends the run.
+        - [ ] T-013 — Integrate held-piece display and input
+            Scope: src/browser/input.ts, view.ts and integration/e2e checks. Contracts: E01–E02, B04, Q01; preserved base gameplay, narrowed to this phase’s PLAN scope.
+            Depends on: T-011, T-012.
+            Evidence: C/hold control works once per piece, held type is visible, restart clears it and queue/state remain consistent through locks. Verify whole bag/hold milestone.
+            Milestone boundary: after this implementation and all prior milestone tasks, review the whole capability’s code/dependencies, execute required acceptance/regressions, repair blockers and commit report `docs/dev/reports/phases/2/2.1.md` plus HANDOFF with this task’s result and initial checkbox. Include findings and TODOs (None when empty); close/read back all task issues before closing the milestone.
+    - [ ] Milestone 2.2 — Rotation and grounded drop lifecycle
+        - [ ] T-014 — Implement ordered clockwise SRS wall kicks
+            Scope: src/core/geometry.ts, game.ts, tests/fixtures/rotation and unit tests. Contracts: E01–E02, B04, Q01; preserved base gameplay, narrowed to this phase’s PLAN scope.
+            Depends on: T-013.
+            Evidence: Use SPEC rotation tables for every JLSTZ/I transition, O invariance, first-success ordering and all-candidate rejection.
+        - [ ] T-015 — Implement full-interval grounded locking
+            Scope: src/core/game.ts and explicit-time fixtures. Contracts: E01–E02, B04, Q01; preserved base gameplay, narrowed to this phase’s PLAN scope.
+            Depends on: T-014.
+            Evidence: At 999 ms grounded retain active piece; at 1000 ms lock; failed moves/repeated grounded actions do not extend it, airborne transition cancels it and suspension freezes it.
+        - [ ] T-016 — Integrate hard drop with shared landing and timing
+            Scope: src/core/landing.ts, game.ts, src/browser/input.ts and integration tests. Contracts: E01–E02, B04, Q01; preserved base gameplay, narrowed to this phase’s PLAN scope.
+            Depends on: T-014, T-015.
+            Evidence: Space moves to ordinary first-barrier landing, adds no score, starts/retains grounding as applicable and never locks immediately by default. Verify rotation/timing/drop interaction and entire milestone.
+            Milestone boundary: after this implementation and all prior milestone tasks, review the whole capability’s code/dependencies, execute required acceptance/regressions, repair blockers and commit report `docs/dev/reports/phases/2/2.2.md` plus HANDOFF with this task’s result and initial checkbox. Include findings and TODOs (None when empty); close/read back all task issues before closing the milestone.
+    - [ ] Milestone 2.3 — Ghost and composed enhancement delivery
+        - [ ] T-017 — Render the shared landing ghost
+            Scope: src/browser/view.ts, src/core/landing.ts and visual checks. Contracts: E01–E02, B04, Q01; preserved base gameplay, narrowed to this phase’s PLAN scope.
+            Depends on: T-016.
+            Evidence: Ghost uses the hard-drop query for active type/orientation, remains distinguishable under the active piece and never mutates source/board.
+        - [ ] T-018 — Verify enhancement lifecycle interactions
+            Scope: tests/unit, tests/integration and tests/e2e scenarios. Contracts: E01–E02, B04, Q01; preserved base gameplay, narrowed to this phase’s PLAN scope.
+            Depends on: T-017.
+            Evidence: Compose hold, bag, wall kicks, projection, hard drop, restart and suspended deadlines; check source conservation and unchanged scoring/spawn failure.
+        - [ ] T-019 — Prepare enhanced browser delivery and guidance
+            Scope: tests/e2e, docs/user, README.md, version metadata and RELEASE-NOTES.md. Contracts: E01–E02, B04, Q01; preserved base gameplay, narrowed to this phase’s PLAN scope.
+            Depends on: T-017, T-018.
+            Evidence: Run both required browsers, inspect ghost/hold output and controls, build assets, prepare v0.2.0 notes and document timer behavior. Verify whole composed milestone.
+            Milestone boundary: after this implementation and all prior milestone tasks, review the whole capability’s code/dependencies, execute required acceptance/regressions, repair blockers and commit report `docs/dev/reports/phases/2/2.3.md` plus HANDOFF with this task’s result and initial checkbox. Include findings and TODOs (None when empty); close/read back all task issues before closing the milestone.
+    - [ ] Milestone 2.4 — Phase review
+        - [ ] T-020 — Review, test and report phase 2
+            Scope: whole phase implementation, integration boundaries, scoped PLAN exits, reports and carried findings. Depends on: T-013, T-016, T-019 and verified completion/closure of delivery milestones 2.1, 2.2, 2.3.
+            Evidence: separate code review and required type/unit/integration/browser/build evidence; repair blockers, retain `docs/dev/reports/phases/2/PHASE-REPORT.md` and HANDOFF with initial completion. Aggregate unresolved milestone TODOs with evidence/rationale/options/owners. If this is the final phase of the complete intended list, include `docs/dev/reports/IMPLEMENTATION-REPORT.md` and final TODO aggregation. Do not claim release publication before verified integration/tag/release operations.
