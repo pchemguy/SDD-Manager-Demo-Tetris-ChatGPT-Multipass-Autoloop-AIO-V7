@@ -12,6 +12,9 @@ The [architecture](ARCHITECTURE.md) separates a rules core from browser scheduli
 | C06 Input | Press/release tracking and semantic command mapping | Forward supported intent to Runtime; suppress only handled gameplay defaults | Real key/focus tests plus pure mapping checks |
 | C07 View | Canvas rasterization and DOM status/control bindings | Render snapshot; emit control intent; no Game writes | Snapshot-driven Canvas pixels and DOM/focus assertions |
 | C08 Runtime | Composition, command ordering and one application lifetime | Construct/dispose collaborators; own their subscriptions | Repeated mount/suspend/resume/dispose integration |
+| C09 Landing | Pure landing projection under the applicable collision rules | Board plus candidate piece to landing cells/anchor; no draws, timers or writes | Obstacle, shaft, rotation and hard-drop agreement fixtures |
+
+C03 owns the seven-bag queue. Draw removes one type; peek is read-only. C04 owns the held type, one-use eligibility and grounded timestamp. C01 owns ordered SRS kick offsets; C04 selects the first admissible rotation candidate against C02. C09 computes the landing once by a shared query; C07 draws the result and C04 uses it for hard drop. Empty hold draws once; swapping an occupied hold slot does not draw. Replacing an active piece creates fresh orientation and timing state.
 
 ## Data and collaboration
 
