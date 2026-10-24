@@ -26,6 +26,12 @@ C04 additionally owns bonuses and active penetration state. C09 provides ordinar
 
 C08 owns the C10 instance for the page lifetime. C04 owns each active piece's effective locking policies; C10 changes never mutate an existing timer. C06/C07 emit validated control intents through C08. C07 owns the next-piece preview and uses C03.peek without advancing the source. Hold availability combines the selected setting, the run's hold eligibility and penetration state.
 
+| Component | Responsibility and owned state | Provided / required boundary | Verification seam |
+| --- | --- | --- | --- |
+| C11 Persistence | Source resolution and browser settings synchronization | Read initial URL/cookies through adapters; resolve fields through C10 codec; write one changed setting | Table-driven precedence tests and real reload/history/cookie integration |
+
+C11 owns no game state and cannot create pieces. Its adapters expose read-cookie, write-cookie and replace-URL operations with independent failure outcomes. C10 publishes selected values only after codec validation. Startup resolves all fields before C08 creates the first run. A setting change updates memory once and attempts its cookie and URL writes separately; a failed write cannot roll back unrelated settings or trigger another run.
+
 ## Data and collaboration
 
 The board is a row-major 20×10 settled-cell grid. Active piece data is type, clockwise orientation and integer anchor; rendering derives occupied cells through C01. Game snapshots include only observable run state, never mutable references to source queues, timers or board internals. Runtime dispatches elapsed time before an input intent at the same observed timestamp, then renders the resulting snapshot. Game processes merge, clear, score and next spawn atomically, so presentation cannot see a half-cleared board.
