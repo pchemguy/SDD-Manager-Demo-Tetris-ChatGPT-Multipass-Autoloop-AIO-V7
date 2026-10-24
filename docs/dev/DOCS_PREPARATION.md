@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested in the project prompt of 2026-10-24.
 - Delivery mode: strict multipass. Preserve established phase/task IDs, names, scope, parentage, order, dependencies and exits; add later scope in subsequent bounded ranges. No flexible exception is granted.
-- Current pass: 4. Cursor: DOCS-003 accepted/preapproved; finish publication and hosted closure before advancing.
+- Current pass: 4. Cursor: DOCS-004 accepted/preapproved; finish publication and hosted closure before advancing.
 - Approval basis: first PROJECT and recorded cross-scope proposals approved by the user’s “Approve” reply on 2026-10-24, accepting published proposal e5fa48fd34e3f38bd99d3872c861313362478add. Later PROJECT approvals are waived under the announced autoloop selection; subsequent document checkpoints through TASKS are preapproved. Initial approval authorizes the agreed six-pass sequence and resets. New material autoloop decisions are delegated after that approval, with recorded rationale and visible updates.
 - Tracking: enabled for preparation and implementation by existing root AGENTS.md. Milestone `sdd-docs-main` #1 and DOCS-001–009 issues #1–9 were created and read back with exact standard content and associations before the first repository modification.
 - Publication: push/read back every owned commit before further work. Actual default/integration target is `main`.
@@ -58,7 +58,7 @@ All entries below originate in initial exploration, pass 1. The user approved th
 | DOCS-001 | Initialization e8cf495287969eaf7d3c5e0f400eef066fe0cc9a published/readback verified; four existing root files preserved; issue #1 closed/readback verified. |
 | DOCS-002 | Scope 4: local accepted/preapproved completion; `PROJECT.md` SHA-256 `63ccd6d83f063437c7cb08aef495b61fc151e7d96c9bab59f0452304315e2ed8`; see qualified acceptance/QC evidence below. Publication/issue effects are established by their actual readbacks. |
 | DOCS-003 | Scope 4: local accepted/preapproved completion; `ARCHITECTURE.md` SHA-256 `87c9a8db3f2f3c6a259e5a1dbcb602ad13b348ff3b096541693f0e1112fea2fa`; see qualified acceptance/QC evidence below. Publication/issue effects are established by their actual readbacks. |
-| DOCS-004 | Scope 4: not complete in this scope; retained document is a prior-scope input until revised and rechecked. |
+| DOCS-004 | Scope 4: local accepted/preapproved completion; `DECOMPOSITION.md` SHA-256 `4b4051032c5f3442ee6f10d91afde8bc1c1124f33ba8d4e60209eeb9664a6d02`; see qualified acceptance/QC evidence below. Publication/issue effects are established by their actual readbacks. |
 | DOCS-005 | Scope 4: not complete in this scope; retained document is a prior-scope input until revised and rechecked. |
 | DOCS-006 | Scope 4: not complete in this scope; retained document is a prior-scope input until revised and rechecked. |
 | DOCS-007 | Scope 4: not complete in this scope; retained document is a prior-scope input until revised and rechecked. |
@@ -76,7 +76,7 @@ All entries below originate in initial exploration, pass 1. The user approved th
 
 ## Pending transitions
 
-Publish/read back the current completion commit and close/read back issue #3. Then continue in dependency order within the six-pass sequence. Final stop: pass 6 DOCS-008, before DOCS-009, package integration or implementation.
+Publish/read back the current completion commit and close/read back issue #4. Then continue in dependency order within the six-pass sequence. Final stop: pass 6 DOCS-008, before DOCS-009, package integration or implementation.
 
 ## Active-pass document evidence
 
@@ -124,6 +124,8 @@ Publish/read back the current completion commit and close/read back issue #3. Th
 - Pass 4, DOCS-002: `PROJECT.md` SHA-256 `63ccd6d83f063437c7cb08aef495b61fc151e7d96c9bab59f0452304315e2ed8`. Scoped autodoc/autoloop preapproval from the user-approved initial sequence; current-scope conformance/content review passed.  Publication and issue #2 closure require readback after the containing commit.
 
 - Pass 4, DOCS-003: `ARCHITECTURE.md` SHA-256 `87c9a8db3f2f3c6a259e5a1dbcb602ad13b348ff3b096541693f0e1112fea2fa`. Scoped autodoc/autoloop preapproval from the user-approved initial sequence; current-scope conformance/content review passed. Ownership, dependency direction, time/random injection and browser/core separation reviewed; no cycles or duplicate state owners required. Publication and issue #3 closure require readback after the containing commit.
+
+- Pass 4, DOCS-004: `DECOMPOSITION.md` SHA-256 `4b4051032c5f3442ee6f10d91afde8bc1c1124f33ba8d4e60209eeb9664a6d02`. Scoped autodoc/autoloop preapproval from the user-approved initial sequence; current-scope conformance/content review passed. Component interfaces, state/resource ownership, rejection/failure and verification seams reviewed against architecture. Publication and issue #4 closure require readback after the containing commit.
 
 ## Scope 1 completion and protected range
 
