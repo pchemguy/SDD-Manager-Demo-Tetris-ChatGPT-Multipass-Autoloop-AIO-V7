@@ -4,7 +4,7 @@
 
 - Mode: autodoc/autoloop, explicitly requested in the project prompt of 2026-10-24.
 - Delivery mode: strict multipass. Preserve established phase/task IDs, names, scope, parentage, order, dependencies and exits; add later scope in subsequent bounded ranges. No flexible exception is granted.
-- Current pass: 5. Cursor: DOCS-008 accepted/preapproved; finish publication and hosted closure before advancing.
+- Current pass: 6 — Configuration persistence. Cursor: DOCS-002 after reset publication and verified issue reopening.
 - Approval basis: first PROJECT and recorded cross-scope proposals approved by the user’s “Approve” reply on 2026-10-24, accepting published proposal e5fa48fd34e3f38bd99d3872c861313362478add. Later PROJECT approvals are waived under the announced autoloop selection; subsequent document checkpoints through TASKS are preapproved. Initial approval authorizes the agreed six-pass sequence and resets. New material autoloop decisions are delegated after that approval, with recorded rationale and visible updates.
 - Tracking: enabled for preparation and implementation by existing root AGENTS.md. Milestone `sdd-docs-main` #1 and DOCS-001–009 issues #1–9 were created and read back with exact standard content and associations before the first repository modification.
 - Publication: push/read back every owned commit before further work. Actual default/integration target is `main`.
@@ -72,11 +72,11 @@ All entries below originate in initial exploration, pass 1. The user approved th
 - Manual provenance: default enabled. Seed 44373f66c78be757a9455effcf61ad85743c1945 on design-docs/ai-logs from main at 893cffb7da0ac90abadb469c7e117a085e8286f3; explicit two-parent merge 62169f0ad3764882e22400b4881903758c88d94b on main. Both pushes/readbacks matched with confirmed cleanup. Both scaffold files byte-match package assets. No transcript created.
 - Branch: design-docs/main created from main at 62169f0ad3764882e22400b4881903758c88d94b; target main. Existing branch and root instructions retained.
 - Credentials: repository-local conventional credential is excluded by *.tkn and untracked; no secret belongs in tracked records.
-- Current reset: scope 4 complete at 178ab67a0aff6309e54ba5e984d1c971281d6d00; advance to predefined scope 5 under user-approved autoloop.
+- Current reset: scope 5 complete at b9c5179d208a519fce859e6c1887ad3d28fbd871; advance to predefined scope 6 under user-approved autoloop.
 
 ## Pending transitions
 
-Publish/read back the current completion commit and close/read back issue #8. Then continue in dependency order within the six-pass sequence. Final stop: pass 6 DOCS-008, before DOCS-009, package integration or implementation.
+Publish/read back this reset, reopen/read back the same issues #2–9 and confirm milestone #1 open, then revise PROJECT for scope 6.
 
 ## Active-pass document evidence
 
@@ -200,3 +200,7 @@ Carried all six approved defaults and application-timing choices forward. Delega
 ## Scope 5 completion and protected range
 
 Scope: Session-only configuration. Current owned phase: 5; task range T-034–T-040. PLAN SHA-256 `c793527a5742c3e9194ad21f37673598504a5163924a08289250b7f662a7d5c0`; TASKS SHA-256 `e71e59c0e41d4ab4a56f9aeaa1338ad522558ac3de416e217219251fa4790dc7`. Earlier ranges retained exactly; current document QC is scoped and package QC remains unselected. The containing DOCS-008 completion commit is the retained source checkpoint for the next reset.
+
+## Reset to scope 6
+
+Retained prior checkpoint b9c5179d208a519fce859e6c1887ad3d28fbd871, all product documents and scopes 1–5 phase/task ranges. Reason: predefined cumulative addition — Configuration persistence. DOCS-002–009 reset together, DOCS-001 retained complete. User initial approval authorizes this reset and later PROJECT preapproval. Publish/read back, then reopen/read back existing issues #2–9; no document work until complete.
