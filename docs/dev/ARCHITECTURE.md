@@ -26,6 +26,8 @@ The piece source owns a shuffled bag and provides draw/peek semantics without ex
 
 Rotation uses canonical shape states and an ordered kick table. Geometry tests isolate pivots/offsets; Game tests integrate collision, hold, landing and timing. Hold swaps a type through Game rather than exchanging a mutable active-piece object.
 
+Ghost visibility is a separate decision over the computed projection. Hiding a projection does not change its geometry or consume randomness. Both midline boundaries and rendering can therefore be verified without duplicating landing logic.
+
 ## Verification and tradeoffs
 
 Canvas keeps board drawing simple; DOM controls provide semantic form interaction and readable status. Pure transitions trade a small amount of snapshot copying for clear ownership and deterministic testing; the board is only 200 cells. Tests use public commands and snapshots rather than reproducing implementation algorithms. Browser verification covers focus, keyboard routing, Canvas output and teardown in both required browsers. Provisioning follows the root browser policy; document readiness does not establish runtime capability.
