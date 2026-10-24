@@ -38,7 +38,11 @@ The renderer distinguishes ghost/active/settled layers while respecting the whit
 
 Configuration owns validated selected settings independently of a run. Runtime applies immediate display/action availability values and supplies a snapshot of locking policies when Game creates each active piece. Game retains the effective per-piece timing snapshot; presentation may show selected and effective policy without leaking internal implementation. Restart resets gameplay while retaining selected settings. Control changes are validated before dispatch, and no input handler edits configuration or gameplay fields directly.
 
-The configuration adapter is in-memory. Reload creates a new default configuration; the application has no storage or URL synchronization side effects.
+## Persistence adapters
+
+The configuration codec is pure and owns the allowed setting schema. A persistence coordinator reads URL/cookies once before the first run, resolves each field independently, and supplies validated settings. Browser adapters own cookie and history access. They catch unavailable-channel errors independently, retain memory state, and report a concise non-blocking status when saving cannot be completed. No recursive URL-change listeners or polling are required; history replacement must not trigger another settings mutation.
+
+Only settings are serialized. Board, bonuses, score, source state and in-flight timers never enter cookies or query parameters. Cookie/URL data is untrusted input and reaches Game only after schema validation.
 
 ## Verification and tradeoffs
 
