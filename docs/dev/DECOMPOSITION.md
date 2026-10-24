@@ -20,6 +20,12 @@ C07 evaluates the dynamic visibility predicate over all projected cells; the que
 
 C04 additionally owns bonuses and active penetration state. C09 provides ordinary/penetrator landing modes without separate hard-drop and ghost algorithms. C02 rejects any overlapping merge regardless of mode and retains settled appearance tags. C04 checks transform feasibility before spending a bonus or accepting an overlapping transit position. C07 derives white active/settled/ghost appearance and bonus indicators from the authoritative snapshot.
 
+| Component | Responsibility and owned state | Provided / required boundary | Verification seam |
+| --- | --- | --- | --- |
+| C10 Configuration | Validated selected settings and defaults, independent of a run | Read values; validate setting mutation; expose per-piece lock snapshot | Domain/default tests; midgame change and restart scenarios |
+
+C08 owns the C10 instance for the page lifetime. C04 owns each active piece's effective locking policies; C10 changes never mutate an existing timer. C06/C07 emit validated control intents through C08. C07 owns the next-piece preview and uses C03.peek without advancing the source. Hold availability combines the selected setting, the run's hold eligibility and penetration state.
+
 ## Data and collaboration
 
 The board is a row-major 20×10 settled-cell grid. Active piece data is type, clockwise orientation and integer anchor; rendering derives occupied cells through C01. Game snapshots include only observable run state, never mutable references to source queues, timers or board internals. Runtime dispatches elapsed time before an input intent at the same observed timestamp, then renders the resulting snapshot. Game processes merge, clear, score and next spawn atomically, so presentation cannot see a half-cleared board.
