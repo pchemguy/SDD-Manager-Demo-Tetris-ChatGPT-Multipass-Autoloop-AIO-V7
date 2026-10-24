@@ -82,6 +82,16 @@ Translation/rotation may allow transient overlap, but all cells must remain insi
 
 Every lock path validates non-overlap; a failed downward attempt during an overlapping transit is not a lock opportunity. Under failed-down locking, only an attempted descent from the valid landing locks. Timer locking begins only at that landing. Merge never deletes or overwrites existing cells. Show active penetrators entirely white, and retain white appearance for their settled cells until cleared. Render their ghost in distinguishable white outline/transparency. Regular active/held/preview/settled pieces use the non-white palette. Show exactly one lightning symbol per bonus and readable numeric text; update from the atomic activation/clear snapshot.
 
+## C01 — Configuration and preview
+
+[CONFIGURATION](spec/CONFIGURATION.md) owns the six settings, defaults, validation and application timing. C10 validates every mutation; C04 snapshots general/hard-drop lock policies at each spawn or hold replacement. Display/action availability uses current selected values. Restart retains selected settings but resets the run. Turning hold off retains slot contents and consumed eligibility. Turning hard drop off makes Space a handled no-op; an effective immediate policy cannot enable a disabled action. Changes may be made while suspended or game over without resuming gameplay.
+
+With preview enabled, show exactly the next source type in spawn orientation using C03.peek. Empty hold consumes the next draw and updates preview; swapping a populated slot does not. Turning preview off hides it without changing the queue. On lock, update preview from the new source state even if the subsequent spawn ends the game; hiding it still does not consume draws.
+
+Under general failed-down policy, only a failed gravity/soft descent at a legal landing locks; successful hard drop follows that rule and does not synthesize a failed attempt. Under general interval policy use B04. Effective hard-drop `immediate` locks synchronously after a successful legal hard drop, including zero-distance drops. It affects neither soft drop nor gravity. Selected locking changes do not affect the existing piece, including a pending deadline; they take effect at the next spawn/hold replacement.
+
+Configuration remains in memory. Reload restores defaults regardless of query or cookie content; no configuration persistence read/write or URL mutation occurs.
+
 ## Q01 — Required verification
 
 Use deterministic random streams and explicit time in core checks. Exercise each success/rejection boundary plus spawn failure, multi-row compaction, four rotations, score updates, restart, suspension and resource disposal. Browser acceptance requires isolated Chromium and Playwright-managed Firefox through the actual application runner, with keyboard interaction, form focus, Canvas/status inspection, screenshots and repeated isolated context/page teardown. Browser identity/provisioning must satisfy BROWSER_DEV_POLICY; a synthetic page proves facilities only, not application acceptance. Pin dependency versions and lockfile when implementing; unit checks cannot replace browser evidence. Do not silently drop a required browser or claim a release from document checks.
@@ -94,3 +104,5 @@ Use deterministic random streams and explicit time in core checks. Exercise each
 | E01–E02 / B04 | Two complete bags; empty/populated/repeated hold and blocked replacement; SRS success/rejection; ghost/drop identity; timer at 999/1000 ms and no grounded reset |
 | V01 | Project above, at and across midline; move active piece above a lower-half projection; hidden ghost does not change hard drop |
 | P01–P02 | Earn/spend/cap inventory; cross an occupied barrier to a deeper legal landing; reject stranded transform; lock without overwrite; hold disabled; white colors and exact symbols |
+| C01 | Exercise all enum/toggle values, next-peek purity, disabled actions, both lock policies and per-piece snapshots across hold/restart |
+| Session boundary | Change settings, restart without reset, reload with query/cookies present and observe defaults with no persistence effects |
