@@ -90,7 +90,9 @@ With preview enabled, show exactly the next source type in spawn orientation usi
 
 Under general failed-down policy, only a failed gravity/soft descent at a legal landing locks; successful hard drop follows that rule and does not synthesize a failed attempt. Under general interval policy use B04. Effective hard-drop `immediate` locks synchronously after a successful legal hard drop, including zero-distance drops. It affects neither soft drop nor gravity. Selected locking changes do not affect the existing piece, including a pending deadline; they take effect at the next spawn/hold replacement.
 
-Configuration remains in memory. Reload restores defaults regardless of query or cookie content; no configuration persistence read/write or URL mutation occurs.
+## C02 — Durable configuration
+
+The CONFIGURATION source-resolution/serialization contract applies before first spawn. URL and cookie validity are assessed per setting. A control change is committed once to memory, then its cookie and query parameter are updated independently. No setting mutation persists gameplay, restarts the game or adds a browser-history entry. Unavailable cookie/history channels do not block play or corrupt other settings.
 
 ## Q01 — Required verification
 
@@ -105,4 +107,4 @@ Use deterministic random streams and explicit time in core checks. Exercise each
 | V01 | Project above, at and across midline; move active piece above a lower-half projection; hidden ghost does not change hard drop |
 | P01–P02 | Earn/spend/cap inventory; cross an occupied barrier to a deeper legal landing; reject stranded transform; lock without overwrite; hold disabled; white colors and exact symbols |
 | C01 | Exercise all enum/toggle values, next-peek purity, disabled actions, both lock policies and per-piece snapshots across hold/restart |
-| Session boundary | Change settings, restart without reset, reload with query/cookies present and observe defaults with no persistence effects |
+| C02 | Mixed-source per-field reload, explicit defaults saved, omitted/invalid/duplicate values, single-field edits preserving unrelated URL data, blocked channels and independent save attempts |
