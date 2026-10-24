@@ -16,6 +16,8 @@ The [architecture](ARCHITECTURE.md) separates a rules core from browser scheduli
 
 C03 owns the seven-bag queue. Draw removes one type; peek is read-only. C04 owns the held type, one-use eligibility and grounded timestamp. C01 owns ordered SRS kick offsets; C04 selects the first admissible rotation candidate against C02. C09 computes the landing once by a shared query; C07 draws the result and C04 uses it for hard drop. Empty hold draws once; swapping an occupied hold slot does not draw. Replacing an active piece creates fresh orientation and timing state.
 
+C07 evaluates the dynamic visibility predicate over all projected cells; the query remains in C09. The predicate is independently testable and cannot influence piece movement.
+
 ## Data and collaboration
 
 The board is a row-major 20×10 settled-cell grid. Active piece data is type, clockwise orientation and integer anchor; rendering derives occupied cells through C01. Game snapshots include only observable run state, never mutable references to source queues, timers or board internals. Runtime dispatches elapsed time before an input intent at the same observed timestamp, then renders the resulting snapshot. Game processes merge, clear, score and next spawn atomically, so presentation cannot see a half-cleared board.
