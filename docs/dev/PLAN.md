@@ -51,3 +51,37 @@ Exactly one phase code-review/testing/report outcome after every delivery milest
 Phase exits: Demonstrate a real keyboard-controlled game through line clear, spawn failure and restart. Verify fixed timing, immediate failed-descent lock, score, bounds, focus/resume and clean teardown in Chromium/Firefox. Produce static build, controls/setup documentation and scoped release notes.
 
 Integration/release boundary: complete all phase tasks/reports and applicable hosted closures, explicitly integrate into the recorded target, verify the merged build and relevant regressions, publish/read back the default-branch release commit/tag, then publish release notes for v0.1.0. A partial phase stops on its working branch. No later capability is required for this phase’s scoped exit.
+
+## Phase 2 — Gameplay enhancements
+
+Outcome and included scope: Seven-bag source, hold, SRS clockwise wall kicks, full-interval grounding deadline, hard drop and always-visible landing ghost. Keep settings/preview/penetration absent.
+
+Dependency: Phase 1 verified, integrated and published.
+
+Contracts: E01–E02, B04, Q01; preserved base gameplay. Target release: v0.2.0.
+
+### Milestone 2.1 — Bag and held-piece lifecycle
+
+Demonstrate controlled bag order and one-use hold through consecutive locks without losing a usable game.
+
+Exit: demonstrate this integrated capability, review its code and relevant dependencies, run focused acceptance/regressions, repair blockers and retain a milestone report/HANDOFF. TASKS assigns these obligations to the appropriate final boundary task under the review-unit policy. Feedback may support a human decision to continue, amend, simplify or stop; it does not automatically change authorized scope.
+
+### Milestone 2.2 — Rotation and grounded drop lifecycle
+
+Demonstrate first-valid SRS candidate selection and hard drop that preserves a non-resetting grounded deadline.
+
+Exit: demonstrate this integrated capability, review its code and relevant dependencies, run focused acceptance/regressions, repair blockers and retain a milestone report/HANDOFF. TASKS assigns these obligations to the appropriate final boundary task under the review-unit policy. Feedback may support a human decision to continue, amend, simplify or stop; it does not automatically change authorized scope.
+
+### Milestone 2.3 — Ghost and composed enhancement delivery
+
+Demonstrate visually distinct projection and every enhanced lifecycle interaction in a built playable game.
+
+Exit: demonstrate this integrated capability, review its code and relevant dependencies, run focused acceptance/regressions, repair blockers and retain a milestone report/HANDOFF. TASKS assigns these obligations to the appropriate final boundary task under the review-unit policy. Feedback may support a human decision to continue, amend, simplify or stop; it does not automatically change authorized scope.
+
+### Milestone 2.4 — Phase review
+
+Exactly one phase code-review/testing/report outcome after every delivery milestone is verified and closed. Verify cross-milestone behavior, the phase exits below and carried findings; repair blockers, retain the phase report and aggregate deferred TODOs. When this is the final phase of the complete intended task list, also retain the final implementation report/TODO aggregation. This special review milestone is not a delivery-count target.
+
+Phase exits: Demonstrate hold/replacement, wall kicks and ghost/drop agreement under 1000 ms grounding delay, including failed moves, grounded transformations and hold boundaries. Re-run prior useful gameplay in both browsers, update guides/build/version and review the composed lifecycle.
+
+Integration/release boundary: complete all phase tasks/reports and applicable hosted closures, explicitly integrate into the recorded target, verify the merged build and relevant regressions, publish/read back the default-branch release commit/tag, then publish release notes for v0.2.0. A partial phase stops on its working branch. No later capability is required for this phase’s scoped exit.
